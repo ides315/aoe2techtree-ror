@@ -18,9 +18,9 @@ const unitClasses = {
     8: '<abbr title="except Camels">Mounted Units</abbr>',
     9: 'Unused',
     10: 'Unused',
-    11: '<abbr title="except Fish Traps">All Buildings</abbr>',
+    11: 'All Buildings',
     12: 'Unused',
-    13: '<abbr title="except Castles and Kreposts">Stone Defense & Harbors</abbr>',
+    13: 'Stone Walls & Gates & Towers',
     14: 'Wolves etc.',
     15: 'All Archers',
     16: '<abbr title="except Fishing Ships">Ships</abbr>',
@@ -28,7 +28,7 @@ const unitClasses = {
     18: 'Trees',
     19: 'Unique Units',
     20: 'Siege Units',
-    21: '<abbr title="except Fish Traps and Wonders">Standard Buildings</abbr>',
+    21: '<abbr title="except Wonders">Standard Buildings</abbr>',
     22: 'Walls & Gates',
     23: 'Gunpowder Units',
     24: 'Boars etc.',
@@ -85,7 +85,7 @@ function loadLocale(localeCode) {
 }
 
 function updatePageTitle() {
-    const aoe2 = data.strings[data.tech_tree_strings['Age of Empires II']];
+    const aoe2 = data.strings[data.tech_tree_strings['Age of Empires II']] + ' - ' + 'Return of Rome';
     const techtree = data.strings[data.tech_tree_strings['Technology Tree']];
     document.title = `${aoe2} ${techtree}`;
 }
@@ -135,12 +135,12 @@ function displayData() {
     let icon_width = 112;
     let vertical_spacing = (row_height - icon_height) / 2 - 10;
     let margin_left = 20;
-    let image_urls = ['dark_age_de.png', 'feudal_age_de.png', 'castle_age_de.png', 'imperial_age_de.png'];
+    let image_urls = ['techtree_stone_age.png', 'techtree_tool_age.png', 'techtree_bronze_age.png', 'techtree_iron_age.png'];
     let age_names = [
-        data.strings[data.age_names['Dark Age']],
-        data.strings[data.age_names['Feudal Age']],
-        data.strings[data.age_names['Castle Age']],
-        data.strings[data.age_names['Imperial Age']]
+        data.strings[data.age_names['Stone Age']],
+        data.strings[data.age_names['Tool Age']],
+        data.strings[data.age_names['Bronze Age']],
+        data.strings[data.age_names['Iron Age']]
     ];
     for (let i = 0; i < image_urls.length; i++) {
         let age_image_group = draw.group().click(hideHelp);
@@ -638,13 +638,9 @@ function styleXRefBadges(name, id, type) {
             if (type === 'UNIT' || type === 'UNIQUEUNIT') {
                 if (civs[civ].units.map((id) => `unit_${id}`).includes(id)) {
                     found = true;
-                } else if (`unit_${civs[`${civ}`].unique.castleAgeUniqueUnit}` === id || `unit_${civs[`${civ}`].unique.imperialAgeUniqueUnit}` === id) {
-                    found = true;
                 }
             } else if (type === 'TECHNOLOGY') {
                 if (civs[civ].techs.map((id) => `tech_${id}`).includes(id)) {
-                    found = true;
-                } else if (`tech_${civs[`${civ}`].unique.castleAgeUniqueTech}` === id || `tech_${civs[`${civ}`].unique.imperialAgeUniqueTech}` === id) {
                     found = true;
                 }
             } else if (type === 'BUILDING') {
@@ -731,20 +727,20 @@ function cost(cost_object) {
 }
 
 function create_building_index() {
-    const buildingIndexShowIds = [
-        ARCHERY_RANGE,
-        BARRACKS,
-        STABLE,
-        SIEGE_WORKSHOP,
-        BLACKSMITH,
-        DOCK,
-        UNIVERSITY,
-        WATCH_TOWER,
-        CASTLE,
-        MONASTERY,
-        TOWN_CENTER,
-        MARKET
-    ];
+	const buildingIndexShowIds = [
+		BARRACKS,
+		ARCHERY_RANGE,
+		STABLE,
+		SIEGE_WORKSHOP,
+		ACADEMY,
+		STORAGE_PIT,
+		GRANARY,
+		WATCH_TOWER,
+		MARKET,
+		GOVERNMENT_CENTER,
+		TEMPLE,
+		DOCK,
+	];
     const buildingIndexRowLength = 6;
 
     let kc = document.getElementById('buildingindex__table');
@@ -774,7 +770,7 @@ function create_building_index() {
 }
 
 function create_colour_key() {
-    let legend = [TYPES.UNIQUEUNIT, TYPES.UNIT, TYPES.BUILDING, TYPES.TECHNOLOGY];
+    let legend = [TYPES.UNIT, TYPES.BUILDING, TYPES.TECHNOLOGY];
     let kc = document.getElementById('key__table');
     let tr = null
     for (let index in legend) {
@@ -793,6 +789,9 @@ function create_colour_key() {
             kc.appendChild(tr);
         }
     }
+	if (legend.length % 2 > 0) {
+		kc.appendChild(tr)
+	}
     document.getElementById('key__label').innerText = data.strings[data.tech_tree_strings['Key']];
 }
 
@@ -860,11 +859,7 @@ function civ(name) {
         makeSVGObjectOpaque(SVG('#' + this.id().replace('_x', '_disabled_gray')), 0.2);
     });
 
-    enable(selectedCiv.buildings, [...selectedCiv.units, UNIQUE_UNIT, ELITE_UNIQUE_UNIT], [...selectedCiv.techs, UNIQUE_TECH_1, UNIQUE_TECH_2]);
-    unique([selectedCiv.unique.castleAgeUniqueUnit,
-        selectedCiv.unique.imperialAgeUniqueUnit,
-        selectedCiv.unique.castleAgeUniqueTech,
-        selectedCiv.unique.imperialAgeUniqueTech], selectedCiv.monkPrefix);
+    enable(selectedCiv.buildings, selectedCiv.units, selectedCiv.techs);
 }
 
 function SVGObjectIsOpaque(svgObj) {
