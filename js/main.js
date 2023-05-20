@@ -730,8 +730,8 @@ function create_building_index() {
 	const buildingIndexShowIds = [
 		BARRACKS,
 		ARCHERY_RANGE,
-		STABLE,
 		SIEGE_WORKSHOP,
+		STABLE,
 		ACADEMY,
 		STORAGE_PIT,
 		GRANARY,
