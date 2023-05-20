@@ -18,112 +18,92 @@ TECH_TREE_STRINGS = {
 }
 
 AGE_NAMES = {
-    "Dark Age": "4201",
-    "Feudal Age": "4202",
-    "Castle Age": "4203",
-    "Imperial Age": "4204"
+    "Stone Age": "4201",
+    "Tool Age": "4202",
+    "Bronze Age": "4203",
+    "Iron Age": "4204"
 }
 
 CIV_NAMES = {
-    "Britons": "10271",
-    "Franks": "10272",
-    "Goths": "10273",
-    "Teutons": "10274",
-    "Japanese": "10275",
-    "Chinese": "10276",
-    "Byzantines": "10277",
-    "Persians": "10278",
-    "Saracens": "10279",
-    "Turks": "10280",
-    "Vikings": "10281",
-    "Mongols": "10282",
-    "Celts": "10283",
-    "Spanish": "10284",
-    "Aztecs": "10285",
-    "Mayans": "10286",
-    "Huns": "10287",
-    "Koreans": "10288",
-    "Italians": "10289",
-    "Hindustanis": "10290",
-    "Incas": "10291",
-    "Magyars": "10292",
-    "Slavs": "10293",
-    "Portuguese": "10294",
-    "Ethiopians": "10295",
-    "Malians": "10296",
-    "Berbers": "10297",
-    "Khmer": "10298",
-    "Malay": "10299",
-    "Burmese": "10300",
-    "Vietnamese": "10301",
-    "Bulgarians": "10302",
-    "Tatars": "10303",
-    "Cumans": "10304",
-    "Lithuanians": "10305",
-    "Burgundians": "10306",
-    "Sicilians": "10307",
-    "Poles": "10308",
-    "Bohemians": "10309",
-    "Bengalis": "10311",
-    "Dravidians": "10310",
-    "Gurjaras": "10312",
-    "Romans": "10313",
+    "Egyptians": "310271",
+    "Greeks": "310272",
+    "Babylonians": "310273",
+    "Assyrians": "310274",
+    "Minoans": "310275",
+    "Hittites": "310276",
+    "Phoenicians": "310277",
+    "Sumerians": "310278",
+    "Persians": "310279",
+    "Shang": "310280",
+    "Yamato": "310281",
+    "Choson": "310282",
+    "Romans": "310283",
+    "Carthaginians": "310284",
+    "Palmyrans": "310285",
+    "Macedonians": "310286",
+    "Lac Viet": "310287",
 }
 
 CIV_HELPTEXTS = {
-    "Britons": "120150",
-    "Franks": "120151",
-    "Goths": "120152",
-    "Teutons": "120153",
-    "Japanese": "120154",
-    "Chinese": "120155",
-    "Byzantines": "120156",
-    "Persians": "120157",
-    "Saracens": "120158",
-    "Turks": "120159",
-    "Vikings": "120160",
-    "Mongols": "120161",
-    "Celts": "120162",
-    "Spanish": "120163",
-    "Aztecs": "120164",
-    "Mayans": "120165",
-    "Huns": "120166",
-    "Koreans": "120167",
-    "Italians": "120168",
-    "Hindustanis": "120169",
-    "Incas": "120170",
-    "Magyars": "120171",
-    "Slavs": "120172",
-    "Portuguese": "120173",
-    "Ethiopians": "120174",
-    "Malians": "120175",
-    "Berbers": "120176",
-    "Khmer": "120177",
-    "Malay": "120178",
-    "Burmese": "120179",
-    "Vietnamese": "120180",
-    "Bulgarians": "120181",
-    "Cumans": "120183",
-    "Lithuanians": "120184",
-    "Tatars": "120182",
-    "Burgundians": "120185",
-    "Sicilians": "120186",
-    "Poles": "120187",
-    "Bohemians": "120188",
-    "Bengalis": "120190",
-    "Dravidians": "120189",
-    "Gurjaras": "120191",
-    "Romans": "120192",
+    "Egyptians": "120150",
+    "Greeks": "120151",
+    "Babylonians": "120152",
+    "Assyrians": "120153",
+    "Minoans": "120154",
+    "Hittites": "120155",
+    "Phoenicians": "120156",
+    "Sumerians": "120157",
+    "Persians": "120158",
+    "Shang": "120159",
+    "Yamato": "120160",
+    "Choson": "120161",
+    "Romans": "120162",
+    "Carthaginians": "120163",
+    "Palmyrans": "120164",
+    "Macedonians": "120165",
+    "Lac Viet": "120166",
 }
 
-RTWC2 = 71
-PTREB = 42
-KONNIK_INF = 1252
-EKONNIK_INF = 1253
-RATHA = 1738
-ERATHA = 1740
-CARTOGRAPHY = 19
-TRACKING = 90
+BUILDING_STYLES = {
+    "Egyptians": "3",
+    "Greeks": "4",
+    "Babylonians": "2",
+    "Assyrians": "3",
+    "Minoans": "4",
+    "Hittites": "3",
+    "Phoenicians": "4",
+    "Sumerians": "2",
+    "Persians": "2",
+    "Shang": "1",
+    "Yamato": "1",
+    "Choson": "1",
+    "Romans": "5",
+    "Carthaginians": "5",
+    "Palmyrans": "5",
+    "Macedonians": "5",
+    "Lac Viet": "1",
+}
+
+LANGUAGES = [
+    'br',
+    'de',
+    'en',
+    'es',
+    'fr',
+    'hi',
+    'it',
+    'jp',
+    'ko',
+    'ms',
+    'mx',
+    'pl',
+    'ru',
+    'tr',
+    'tw',
+    'vi',
+    'zh',
+]
+
 
 def get_unit_cost(unit):
     return get_cost(unit["Creatable"])
@@ -144,24 +124,25 @@ def get_cost(creatable):
     return cost
 
 
-def gather_language_data(resourcesdir, data, language):
-    key_value_strings_file_en = resourcesdir / language / 'strings' / 'key-value' / 'key-value-strings-utf8.txt'
+def gather_language_data(programdir, data, language):
     key_value = {}
-    with key_value_strings_file_en.open() as f:
+    # some strings are shared with the base game; read these in first
+    key_value_strings_file_en = programdir / 'resources' / language / 'strings' / 'key-value' / 'key-value-strings-utf8.txt'
+    with key_value_strings_file_en.open(encoding='utf-8') as f:
+        for line in f:
+            parse_line(key_value, line)
+    # override strings with everything specific to AoE1 / Return of Rome
+    key_value_pompeii_strings_file_en = programdir / 'modes' / 'Pompeii' / 'resources' / language / 'strings' / 'key-value' / 'key-value-pompeii-strings-utf8.txt'
+    with key_value_pompeii_strings_file_en.open(encoding='utf-8') as f:
         for line in f:
             parse_line(key_value, line)
 
-    key_value[26708] = key_value[26186]  # Palisade Gate
-    key_value[26097] = key_value[26381]  # Trebuchet
-    key_value[26768] = key_value[28314]  # Gillnets
-    key_value[42057] = key_value[26288]  # Use Konnik for Dismounted Konnik
-    key_value[42058] = key_value[26290]  # Use Elite Konnik for Dismounted Elite Konnik
-    key_value[21104] = key_value[5414]  # Fix Ratha name
-    key_value[42104] = key_value[26414]  # Fix Ratha description
-    key_value[42096] = key_value[26414]  # Fix Ratha (melee) description
-    key_value[21105] = key_value[5420]  # Fix Elite Ratha name
-    key_value[42105] = key_value[26420]  # Fix Elite Ratha description
-    key_value[42097] = key_value[26420]  # Fix Elite Ratha (melee) description
+    key_value[5121] = key_value[305131]     #  Villager
+    key_value[26121] = key_value[326131]
+
+    key_value[305471] = key_value[305470]   #  Trade Cart
+    key_value[326471] = key_value[326470]
+
 
     key_value_filtered = {}
     for datatype in ("buildings", "units", "techs"):
@@ -170,6 +151,7 @@ def gather_language_data(resourcesdir, data, language):
             help_id = data[datatype][item_id]['LanguageHelpId']
             key_value_filtered[name_id] = key_value[name_id]
             key_value_filtered[help_id] = key_value[help_id]
+            
     for name in CIV_HELPTEXTS:
         key = int(CIV_HELPTEXTS[name])
         key_value_filtered[key] = key_value[key]
@@ -200,16 +182,16 @@ def parse_line(key_value, line):
 
 
 def gather_data(content, civs, unit_upgrades):
-    building_ids = set.union({b for c in civs.values() for b in c['buildings']}, \
-        {RTWC2})
-    unit_ids = set.union({u for c in civs.values() for u in c['units']}, \
-        {c['unique']['castleAgeUniqueUnit'] for c in civs.values()}, \
-        {c['unique']['imperialAgeUniqueUnit'] for c in civs.values()}, \
-        {PTREB, KONNIK_INF, EKONNIK_INF, RATHA, ERATHA})
-    tech_ids = set.union({t for c in civs.values() for t in c['techs']}, \
-        {c['unique']['castleAgeUniqueTech'] for c in civs.values()}, \
-        {c['unique']['imperialAgeUniqueTech'] for c in civs.values()}, \
-        {CARTOGRAPHY, TRACKING})
+    ages = list(AGE_NAMES.keys())[1:]
+    building_ids = {b for c in civs.values() for b in c['buildings']}
+    unit_ids = {u for c in civs.values() for u in c['units']}
+    tech_ids = set.union(
+        {t for c in civs.values() for t in c['techs']},
+        {t for t, tech in enumerate(content['Techs']) if tech['Name'] in ages},
+        {t for t, tech in enumerate(content['Techs']) if 'Wall' in tech['Name']},
+        {t for t, tech in enumerate(content['Techs']) if 'Tower' in tech['Name']},
+        {49},  # archer chain mail
+    )
     gaia = content["Civs"][0]
     graphics = content["Graphics"]
     data = {"buildings": {}, "units": {}, "techs": {}, "unit_upgrades": {}}
@@ -227,10 +209,6 @@ def gather_data(content, civs, unit_upgrades):
     for unit_id, upgrade_id in unit_upgrades.items():
         tech = content["Techs"][upgrade_id]
         add_unit_upgrade(unit_id, tech_id, tech, data)
-
-    data["units"][83]['LanguageNameId'] = 5606  # Villager
-    data["units"][128]['LanguageNameId'] = 19052  # Trade Cart
-    data["units"][331]['LanguageNameId'] = 5097  # Trebuchet
 
     return data
 
@@ -321,139 +299,95 @@ def add_unit_upgrade(key, tech_id, tech, data):
     }
 
 
-def is_castle_age_unique_unit(unit):
-    if unit['Node Type'] != 'UniqueUnit':
-        return False
-    if unit['Building ID'] != 82:
-        return False
-    if unit['Age ID'] != 3:
-        return False
-    if unit['Link Node Type'] != 'BuildingTech':
-        return False
-    return True
+def is_unit(unit):
+    is_unit_type = (unit.get('Node Type') in ('Unit', 'UnitUpgrade'))
+    is_available = (unit.get('Node Status', 'NotAvailable') != 'NotAvailable')
+    return (is_unit_type and is_available)
 
 
-def is_imperial_age_unique_unit(unit):
-    if unit['Node Type'] != 'UniqueUnit':
-        return False
-    if unit['Building ID'] != 82:
-        return False
-    if unit['Age ID'] != 4:
-        return False
-    if unit['Link Node Type'] != 'UniqueUnit':
-        return False
-    return True
-
-
-def is_castle_age_unique_tech(tech):
-    if tech['Node Type'] != 'Research':
-        return False
-    if tech['Building ID'] != 82:
-        return False
-    if tech['Age ID'] != 3:
-        return False
-    if tech['Link Node Type'] != 'BuildingTech':
-        return False
-    return tech['Picture Index'] == 33
-
-
-def is_imperial_age_unique_tech(tech):
-    if tech['Node Type'] != 'Research':
-        return False
-    if tech['Building ID'] != 82:
-        return False
-    if tech['Age ID'] != 4:
-        return False
-    if tech['Link Node Type'] != 'BuildingTech':
-        return False
-    return tech['Picture Index'] == 107
-
-
-def write_language_files(args, data, outputdir):
-    resourcesdir = Path(args.programdir) / 'resources'
-    for language in ('br', 'de', 'en', 'es', 'fr', 'hi', 'it', 'jp', 'ko', 'ms', 'mx', 'pl', 'ru', 'tr', 'tw', 'vi', 'zh'):
-        key_value_filtered = gather_language_data(resourcesdir, data, language)
-
-        languagedir = outputdir / 'locales' / language
-        languagedir.mkdir(parents=True, exist_ok=True)
-        languagefile = languagedir / 'strings.json'
-        with languagefile.open('w') as f:
-            print(f'Writing language file {languagefile}')
-            json.dump(key_value_filtered, f, indent=4, sort_keys=True, ensure_ascii=False)
+def is_tech(tech):
+    is_tech_type = (tech.get('Node Type') == 'Research')
+    is_available = (tech.get('Node Status', 'NotAvailable') != 'NotAvailable')
+    return (is_tech_type and is_available)
 
 
 def gather_civs(techtrees):
-    unit_excludelist = (
-        759,  # Huskarl from Barracks
-        761,  # Elite Huskarl from Barracks
-        886,  # Tarkan from Stable
-        887,  # Elite Tarkan from Stable
-        1260,  # Elite Kipchak from the Cuman Mercenaries tech
-    )
+    unit_excludelist = ()
     civs = {}
     unit_upgrades = {}
     for civ in techtrees['civs']:
-        current_civ = {'buildings': [], 'units': [], 'techs': [], 'unique': {}, 'monkPrefix': ''}
+        current_civ = {'buildings': [], 'units': [], 'techs': []}
         for building in civ['civ_techs_buildings']:
             if building['Node Status'] != 'NotAvailable':
                 current_civ['buildings'].append(building['Node ID'])
-        for unit in civ['civ_techs_units']:
-            if unit['Name'] == 'Monk' and unit['Picture Index'] == 131:
-                current_civ['monkPrefix'] = 'meso_'
-            if unit['Node Type'] in ('Unit', 'UniqueUnit', 'UnitUpgrade') and unit['Node Status'] != 'NotAvailable':
-                if is_castle_age_unique_unit(unit):
-                    current_civ['unique']['castleAgeUniqueUnit'] = unit['Node ID']
-                elif is_imperial_age_unique_unit(unit):
-                    current_civ['unique']['imperialAgeUniqueUnit'] = unit['Node ID']
-                elif unit['Node ID'] not in unit_excludelist:
-                    current_civ['units'].append(unit['Node ID'])
-                if unit['Trigger Tech ID'] > -1:
-                    unit_upgrades[unit['Node ID']] = unit['Trigger Tech ID']
-
-        for tech in civ['civ_techs_units']:
-            if tech['Node Type'] == 'Research' and tech['Node Status'] != 'NotAvailable':
-                if is_castle_age_unique_tech(tech):
-                    current_civ['unique']['castleAgeUniqueTech'] = tech['Node ID']
-                elif is_imperial_age_unique_tech(tech):
-                    current_civ['unique']['imperialAgeUniqueTech'] = tech['Node ID']
-                else:
-                    current_civ['techs'].append(tech['Node ID'])
+        for unit in filter(is_unit, civ['civ_techs_units']):
+            current_civ['units'].append(unit['Node ID'])
+            if unit['Trigger Tech ID'] > -1:
+                unit_upgrades[unit['Node ID']] = unit['Trigger Tech ID']
+        for tech in filter(is_tech, civ['civ_techs_units']):
+            current_civ['techs'].append(tech['Node ID'])
 
         current_civ['buildings'] = sorted(current_civ['buildings'])
         current_civ['units'] = sorted(current_civ['units'])
         current_civ['techs'] = sorted(current_civ['techs'])
 
         civname = civ['civ_id'].capitalize()
-        if civname == 'Magyar':
-            civname = 'Magyars'
-        if civname == 'Indians':
-            civname = 'Hindustanis'
+        if civname == 'Carthagians':
+            civname = 'Carthaginians'   # correct spelling; Carthag_IN_ians
+        elif civname == 'Lacviet':
+            civname = 'Lac Viet'        # add space
         civs[civname] = current_civ
-
-    XOLOTL_WARRIOR = 1570
-    for civname in ('Aztecs', 'Mayans', 'Incas'):
-        civs[civname]['units'].append(XOLOTL_WARRIOR)
-        civs[civname]['units'] = sorted(civs[civname]['units'])
-    HARBOR = 1189
-    civs['Malay']['buildings'].append(HARBOR)
-    civs['Malay']['buildings'] = sorted(civs['Malay']['buildings'])
-
-    DEMOLITION_SHIP = 527
-    FIRE_SHIP = 529
-    WAR_GALLEY_UPGRADE = 34
-    unit_upgrades[DEMOLITION_SHIP] = WAR_GALLEY_UPGRADE
-    unit_upgrades[FIRE_SHIP] = WAR_GALLEY_UPGRADE
 
     return civs, unit_upgrades
 
 
+def update_civ_techs(civs, data):
+    age_ups = [t['ID'] for t in data['techs'].values()
+               if t['internal_name'].endswith('Age')]
+    wall_tower_techs = {
+        72: 11,  #  Small Wall
+        117: 13, #  Medium Wall
+        155: 14, #  Fortified Wall
+        79: 16,  #  Watch Tower
+        234: 12, #  Sentry Tower
+        235: 15, #  Guard Tower
+        236: 2,  #  Ballista Tower
+    }
+    for civ in civs.values():
+        civ['techs'].extend(age_ups)
+        for building_id, tech_id in wall_tower_techs.items():
+            if building_id in civ['buildings']:
+                civ['techs'].append(tech_id)
+        civ['techs'].sort()
+
+
 def write_datafile(data, techtrees, outputdir):
     datafile = outputdir / 'data.json'
+    data = {
+        "age_names": AGE_NAMES,
+        "building_styles": BUILDING_STYLES, 
+        "civ_helptexts": CIV_HELPTEXTS,
+        "civ_names": CIV_NAMES,
+        "data": data,
+        "tech_tree_strings": TECH_TREE_STRINGS,
+        "techtrees": techtrees,
+    }
     with datafile.open('w') as f:
         print(f'Writing data file {datafile}')
-        json.dump({"tech_tree_strings": TECH_TREE_STRINGS, "age_names": AGE_NAMES, "civ_names": CIV_NAMES,
-                   "civ_helptexts": CIV_HELPTEXTS, "techtrees": techtrees, "data": data}, f, indent=4, sort_keys=True,
-                  ensure_ascii=False)
+        json.dump(data, f, indent=4, sort_keys=True, ensure_ascii=False)
+
+
+def write_language_files(args, data, outputdir):
+    programdir = Path(args.programdir)
+    for language in LANGUAGES:
+        key_value_filtered = gather_language_data(programdir, data, language)
+
+        languagedir = outputdir / 'locales' / language
+        languagedir.mkdir(parents=True, exist_ok=True)
+        languagefile = languagedir / 'strings.json'
+        with languagefile.open('w', encoding='utf-8') as f:
+            print(f'Writing language file {languagefile}')
+            json.dump(key_value_filtered, f, indent=4, sort_keys=True, ensure_ascii=False)
 
 
 def main():
@@ -473,13 +407,15 @@ def main():
     if args.output:
         outputdir = Path(args.output)
 
-    techtreesfile = Path(args.programdir) / 'resources' / '_common' / 'dat' / 'civTechTrees.json'
+    techtreesfile = Path(args.programdir) / 'modes' / 'Pompeii' / 'resources' / '_common' / 'dat' / 'civTechTrees.json'
     techtrees = json.loads(techtreesfile.read_text())
     civs, unit_upgrades = gather_civs(techtrees)
 
     datafile = Path(args.datafile)
     content = json.loads(datafile.read_text())
     data = gather_data(content, civs, unit_upgrades)
+
+    update_civ_techs(civs, data)
 
     write_datafile(data, civs, outputdir)
     write_language_files(args, data, outputdir)
