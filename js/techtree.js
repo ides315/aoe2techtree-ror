@@ -26,372 +26,142 @@ const BARRACKS = 12;
 const DOCK = 45;
 const SIEGE_WORKSHOP = 49;
 const FARM = 50;
-const MILL = 68;
+const FORTIFIED_GATE = 63;
+const MEDIUM_GATE = 64;
+const GRANARY = 68;
 const HOUSE = 70;
-const PALISADE_WALL = 72;
+const SMALL_WALL = 72;
 const WATCH_TOWER = 79;
-const CASTLE = 82;
 const MARKET = 84;
 const ARCHERY_RANGE = 87;
 const STABLE = 101;
-const BLACKSMITH = 103;
-const MONASTERY = 104;
+const ACADEMY = 103;
+const TEMPLE = 104;
 const TOWN_CENTER = 109;
-const STONE_WALL = 117;
+const MEDIUM_WALL = 117;
 const FORTIFIED_WALL = 155;
-const FISH_TRAP = 199;
-const UNIVERSITY = 209;
-const GUARD_TOWER = 234;
-const KEEP = 235;
-const BOMBARD_TOWER = 236;
+const GOVERNMENT_CENTER = 209;
+const SENTRY_TOWER = 234;
+const GUARD_TOWER = 235;
+const BALLISTA_TOWER = 236;
 const WONDER = 276;
-const GATE = 487;
-const LUMBER_CAMP = 562;
-const MINING_CAMP = 584;
-const OUTPOST = 598;
+const STORAGE_PIT = 562;
 const TOWN_CENTER_2 = 621;
-const PALISADE_GATE = 792;
-const FEITORIA = 1021;
-const HARBOR = 1189;
-const KREPOST = 1251;
-const DONJON = 1665;
-const ARCHER = 4;
-const HAND_CANNONEER = 5;
-const ELITE_SKIRMISHER = 6;
-const SKIRMISHER = 7;
-const LONGBOWMAN = 8;
-const MANGUDAI = 11;
-const FISHING_SHIP = 13;
-const TRADE_COG = 17;
+const SMALL_GATE = 789;
+const BOWMAN = 4;
+const CHARIOT_ARCHER = 5;
+const SLINGER = 7;
+const MERCHANT_SHIP = 11;
+const FISHING_BOAT = 13;
+const FISHING_SHIP = 15;
+const TRADE_BOAT = 17;
 const WAR_GALLEY = 21;
-const CROSSBOWMAN = 24;
-const TEUTONIC_KNIGHT = 25;
-const BOMBARD_CANNON = 36;
-const KNIGHT = 38;
-const CAVALRY_ARCHER = 39;
-const CATAPHRACT = 40;
-const HUSKARL = 41;
-const JANISSARY = 46;
-const CHU_KO_NU = 73;
-const MILITIA = 74;
-const MAN_AT_ARMS = 75;
+const IMPROVED_BOWMAN = 24;
+const HEAVY_TRANSPORT = 37;
+const CAVALRY = 38;
+const HORSE_ARCHER = 39;
+const SHORT_SWORDSMAN = 74;
+const BROAD_SWORDSMAN = 75;
 const LONG_SWORDSMAN = 77;
 const VILLAGER = 83;
-const SPEARMAN = 93;
-const MONK = 125;
+const HOPLITE = 93;
+const PRIEST = 125;
 const TRADE_CART = 128;
-const SLINGER = 185;
-const IMPERIAL_CAMEL_RIDER = 207;
-const WOAD_RAIDER = 232;
-const WAR_ELEPHANT = 239;
-const LONGBOAT = 250;
-const SCORPION = 279;
-const MANGONEL = 280;
-const THROWING_AXEMAN = 281;
-const MAMELUKE = 282;
-const CAVALIER = 283;
-const SAMURAI = 291;
+const BALLISTA = 279;
+const STONE_THROWER = 280;
+const CLUBMAN = 281;
+const HEAVY_CAVALRY = 283;
 const CAMEL_RIDER = 329;
-const HEAVY_CAMEL_RIDER = 330;
-const TREBUCHET = 331;
-const PIKEMAN = 358;
-const HALBERDIER = 359;
-const CANNON_GALLEON = 420;
-const CAPPED_RAM = 422;
-const PETARD = 440;
-const HUSSAR = 441;
-const GALLEON = 442;
-const SCOUT_CAVALRY = 448;
-const TWO_HANDED_SWORDSMAN = 473;
-const HEAVY_CAV_ARCHER = 474;
-const ARBALESTER = 492;
-const DEMOLITION_SHIP = 527;
-const HEAVY_DEMO_SHIP = 528;
-const FIRE_SHIP = 529;
-const ELITE_LONGBOWMAN = 530;
-const ELITE_THROWING_AXEMAN = 531;
-const FAST_FIRE_SHIP = 532;
-const ELITE_LONGBOAT = 533;
-const ELITE_WOAD_RAIDER = 534;
-const GALLEY = 539;
-const HEAVY_SCORPION = 542;
-const TRANSPORT_SHIP = 545;
-const LIGHT_CAVALRY = 546;
-const SIEGE_RAM = 548;
-const ONAGER = 550;
-const ELITE_CATAPHRACT = 553;
-const ELITE_TEUTONIC_KNIGHT = 554;
-const ELITE_HUSKARL = 555;
-const ELITE_MAMELUKE = 556;
-const ELITE_JANISSARY = 557;
-const ELITE_WAR_ELEPHANT = 558;
-const ELITE_CHU_KO_NU = 559;
-const ELITE_SAMURAI = 560;
-const ELITE_MANGUDAI = 561;
-const CHAMPION = 567;
-const PALADIN = 569;
-const SIEGE_ONAGER = 588;
-const ELITE_CANNON_GALLEON = 691;
-const BERSERK = 692;
-const ELITE_BERSERK = 694;
-const JAGUAR_WARRIOR = 725;
-const ELITE_JAGUAR_WARRIOR = 726;
-const EAGLE_SCOUT = 751;
-const ELITE_EAGLE_WARRIOR = 752;
-const EAGLE_WARRIOR = 753;
-const TARKAN = 755;
-const ELITE_TARKAN = 757;
-const PLUMED_ARCHER = 763;
-const ELITE_PLUMED_ARCHER = 765;
-const CONQUISTADOR = 771;
-const ELITE_CONQUISTADOR = 773;
-const MISSIONARY = 775;
-const WAR_WAGON = 827;
-const ELITE_WAR_WAGON = 829;
-const TURTLE_SHIP = 831;
-const ELITE_TURTLE_SHIP = 832;
-const GENOESE_CROSSBOWMAN = 866;
-const ELITE_GENOESE_CROSSBOWMAN = 868;
-const MAGYAR_HUSZAR = 869;
-const ELITE_MAGYAR_HUSZAR = 871;
+const PHALANGITE = 358;
+const CENTURION = 359;
+const CATAPULT_TRIREME = 420;
+const TRIREME = 442;
+const SCOUT = 448;
+const LEGIONARY = 473;
+const HEAVY_HORSE_ARCHER = 474;
+const COMPOSITE_BOWMAN = 492;
+const AXEMAN = 531;
+const SCOUT_SHIP = 539;
+const HELEPOLIS = 542;
+const LIGHT_TRANSPORT = 545;
+const CATAPULT = 550;
+const CATAPHRACT = 569;
+const HEAVY_CATAPULT = 588;
+const JUGGERNAUT = 691;
 const ELEPHANT_ARCHER = 873;
-const ELITE_ELEPHANT_ARCHER = 875;
-const BOYAR = 876;
-const ELITE_BOYAR = 878;
-const KAMAYUK = 879;
-const ELITE_KAMAYUK = 881;
-const CONDOTTIERO = 882;
-const ORGAN_GUN = 1001;
-const ELITE_ORGAN_GUN = 1003;
-const CARAVEL = 1004;
-const ELITE_CARAVEL = 1006;
-const CAMEL_ARCHER = 1007;
-const ELITE_CAMEL_ARCHER = 1009;
-const GENITOUR = 1010;
-const ELITE_GENITOUR = 1012;
-const GBETO = 1013;
-const ELITE_GBETO = 1015;
-const SHOTEL_WARRIOR = 1016;
-const ELITE_SHOTEL_WARRIOR = 1018;
 const FIRE_GALLEY = 1103;
-const DEMOLITION_RAFT = 1104;
-const SIEGE_TOWER = 1105;
-const BALLISTA_ELEPHANT = 1120;
-const ELITE_BALLISTA_ELEPHANT = 1122;
-const KARAMBIT_WARRIOR = 1123;
-const ELITE_KARAMBIT_WARRIOR = 1125;
-const ARAMBAI = 1126;
-const ELITE_ARAMBAI = 1128;
-const RATTAN_ARCHER = 1129;
-const ELITE_RATTAN_ARCHER = 1131;
-const BATTLE_ELEPHANT = 1132;
-const ELITE_BATTLE_ELEPHANT = 1134;
-const IMPERIAL_SKIRMISHER = 1155;
-const KONNIK = 1225;
-const ELITE_KONNIK = 1227;
-const KESHIK = 1228;
-const ELITE_KESHIK = 1230;
-const KIPCHAK = 1231;
-const ELITE_KIPCHAK = 1233;
-const LEITIS = 1234;
-const ELITE_LEITIS = 1236;
-const DISMOUNTED_KONNIK = 1252;
-const DISMOUNTED_ELITE_KONNIK = 1253;
-const KONNIK_2 = 1254;
-const ELITE_KONNIK_2 = 1255;
-const BATTERING_RAM = 1258;
-const FLAMING_CAMEL = 1263;
-const STEPPE_LANCER = 1370;
-const ELITE_STEPPE_LANCER = 1372;
-const XOLOTL_WARRIOR = 1570;
-const COUSTILLIER = 1655;
-const ELITE_COUSTILLIER = 1657;
-const SERJEANT = 1658;
-const ELITE_SERJEANT = 1659;
-const DSERJEANT = 1660;
-const ELITE_DSERJEANT = 1661;
-const FLEMISHPIKEMAN = 1699;
-const OBUCH = 1701;
-const ELITE_OBUCH = 1703;
-const HUSSITE_WAGON = 1704;
-const ELITE_HUSSITE_WAGON = 1706;
-const WINGED_HUSSAR = 1707;
-const HOUFNICE = 1709;
-const FOLWARK = 1734;
-const ARMORED_ELEPHANT = 1744;
-const SIEGE_ELEPHANT = 1746;
-const THIRISADAI = 1750;
-const SHRIVAMSHA_RIDER = 1751;
-const ELITE_SHRIVAMSHA_RIDER = 1753;
-const CARAVANSERAI = 1754;
-const CAMEL_SCOUT = 1755;
-const DSPEARMAN = 1786;
-const DPIKEMAN = 1787;
-const DHALBERDIER = 1788;
-const LEGIONARY = 1793;
-const DROMON = 1795;
-const YEOMEN = 3;
-const EL_DORADO = 4;
-const FUROR_CELTICA = 5;
-const DRILL = 6;
-const MAHOUTS = 7;
-const TOWN_WATCH = 8;
-const ZEALOTRY = 9;
-const ARTILLERY = 10;
-const CRENELLATIONS = 11;
-const CROP_ROTATION = 12;
-const HEAVY_PLOW = 13;
-const HORSE_COLLAR = 14;
-const GUILDS = 15;
-const ANARCHY = 16;
-const BANKING = 17;
-const ATHEISM = 21;
-const LOOM = 22;
-const COINAGE = 23;
-const GARLAND_WARS = 24;
-const HUSBANDRY = 39;
-const FAITH = 45;
-const CHEMISTRY = 47;
-const CARAVAN = 48;
-const BERSERKERGANG = 49;
-const MASONRY = 50;
-const ARCHITECTURE = 51;
-const ROCKETRY = 52;
-const TREADMILL_CRANE = 54;
-const GOLD_MINING = 55;
-const KATAPARUTO = 59;
-const LOGISTICA = 61;
-const KEEP_TECH = 63;
-const BOMBARD_TOWER_TECH = 64;
-const GILLNETS = 65;
-const FORGING = 67;
-const IRON_CASTING = 68;
-const SCALE_MAIL_ARMOR = 74;
-const BLAST_FURNACE = 75;
-const CHAIN_MAIL_ARMOR = 76;
-const PLATE_MAIL_ARMOR = 77;
-const PLATE_BARDING_ARMOR = 80;
-const SCALE_BARDING_ARMOR = 81;
-const CHAIN_BARDING_ARMOR = 82;
-const BEARDED_AXE = 83;
-const BALLISTICS = 93;
-const FEUDAL_AGE = 101;
-const CASTLE_AGE = 102;
-const IMPERIAL_AGE = 103;
-const GUARD_TOWER_TECH = 140;
-const GOLD_SHAFT_MINING = 182;
-const FORTIFIED_WALL_TECH = 194;
-const FLETCHING = 199;
-const BODKIN_ARROW = 200;
-const BRACER = 201;
-const DOUBLE_BIT_AXE = 202;
-const BOW_SAW = 203;
-const PADDED_ARCHER_ARMOR = 211;
-const LEATHER_ARCHER_ARMOR = 212;
-const WHEELBARROW = 213;
-const SQUIRES = 215;
-const RING_ARCHER_ARMOR = 219;
-const TWO_MAN_SAW = 221;
-const BLOCK_PRINTING = 230;
-const SANCTITY = 231;
-const ILLUMINATION = 233;
-const HAND_CART = 249;
-const FERVOR = 252;
-const STONE_MINING = 278;
-const STONE_SHAFT_MINING = 279;
-const TOWN_PATROL = 280;
-const CONSCRIPTION = 315;
-const REDEMPTION = 316;
-const ATONEMENT = 319;
-const SAPPERS = 321;
-const MURDER_HOLES = 322;
-const SHIPWRIGHT = 373;
-const CAREENING = 374;
-const DRY_DOCK = 375;
-const SIEGE_ENGINEERS = 377;
-const HOARDINGS = 379;
-const HEATED_SHOT = 380;
-const SPIES_TREASON = 408;
-const BLOODLINES = 435;
-const PARTHIAN_TACTICS = 436;
-const THUMB_RING = 437;
-const THEOCRACY = 438;
-const HERESY = 439;
-const SUPREMACY = 440;
-const HERBAL_MEDICINE = 441;
-const SHINKICHON = 445;
-const PERFUSION = 457;
-const ATLATL = 460;
-const WARWOLF = 461;
-const GREAT_WALL = 462;
-const CHIEFTAINS = 463;
-const GREEK_FIRE = 464;
-const STRONGHOLD = 482;
-const MARAUDERS = 483;
-const YASAMA = 484;
-const OBSIDIAN_ARROWS = 485;
-const PANOKSEON = 486;
-const NOMADS = 487;
-const KAMANDARAN = 488;
-const IRONCLAD = 489;
-const MADRASAH = 490;
-const SIPAHI = 491;
-const INQUISITION = 492;
-const CHIVALRY = 493;
-const PAVISE = 494;
-const SILK_ROAD = 499;
-const SULTANS = 506;
-const SHATAGNI = 507;
-const ORTHODOXY = 512;
-const DRUZHINA = 513;
-const CORVINIAN_ARMY = 514;
-const RECURVE_BOW = 515;
-const ANDEAN_SLING = 516;
-const FABRIC_SHIELDS = 517;
-const CARRACK = 572;
-const ARQUEBUS = 573;
-const ROYAL_HEIRS = 574;
-const TORSION_ENGINES = 575;
-const TIGUI = 576;
-const FARIMBA = 577;
-const KASBAH = 578;
-const MAGHRABI_CAMELS = 579;
-const ARSON = 602;
-const ARROWSLITS = 608;
-const TUSK_SWORDS = 622;
-const DOUBLE_CROSSBOW = 623;
-const THALASSOCRACY = 624;
-const FORCED_LEVY = 625;
-const HOWDAH = 626;
-const MANIPUR_CAVALRY = 627;
-const CHATRAS = 628;
-const PAPER_MONEY = 629;
-const STIRRUPS = 685;
-const BAGAINS = 686;
-const SILK_ARMOR = 687;
-const TIMURID_SIEGECRAFT = 688;
-const STEPPE_HUSBANDRY = 689;
-const CUMAN_MERCENARIES = 690;
-const HILL_FORTS = 691;
-const TOWER_SHIELDS = 692;
-const SUPPLIES = 716;
-const BURGUNDIAN_VINEYARDS = 754;
-const FLEMISH_REVOLUTION = 755;
-const FIRST_CRUSADE = 756;
-const SCUTAGE = 757;
-const GAMBESONS = 875;
+const WAR_ELEPHANT = 1132;
+const ARMORED_ELEPHANT = 1134;
+const CHARIOT = 1370;
+const SCYTHE_CHARIOT = 1372;
+const BALLISTA_TOWER_TECH = 2;
+const SMALL_WALL_TECH = 11;
+const SENTRY_TOWER_TECH = 12;
+const MEDIUM_WALL_TECH = 13;
+const FORTIFIED_WALL_TECH = 14;
+const GUARD_TOWER_TECH = 15;
+const WATCH_TOWER_TECH = 16;
+const AFTERLIFE = 18;
+const WRITING = 19;
+const FANATICISM = 20;
+const MYSTICISM = 21;
+const ASTROLOGY = 22;
+const ZEALOTRY = 23;
+const POLYTHEISM = 24;
+const WHEEL = 28;
+const COINAGE = 30;
+const PLOW = 31;
+const ARTISANSHIP = 32;
+const NOBILITY = 34;
+const ENGINEERING = 35;
+const ALCHEMY = 37;
+const INFANTRY_LEATHER_ARMOR = 40;
+const ARCHER_LEATHER_ARMOR = 41;
+const CAVALRY_LEATHER_ARMOR = 42;
+const INFANTRY_SCALE_ARMOR = 43;
+const ARCHER_SCALE_ARMOR = 44;
+const CAVALRY_SCALE_ARMOR = 45;
+const TOOLWORKING = 46;
+const BRONZE_SHIELD = 47;
+const INFANTRY_CHAIN_MAIL = 48;
+const ARCHER_CHAIN_MAIL = 49;
+const CAVALRY_CHAIN_MAIL = 50;
+const METALWORKING = 51;
+const METALLURGY = 52;
+const IRRIGATION = 80;
+const DOMESTICATION = 81;
+const TOOL_AGE = 101;
+const BRONZE_AGE = 102;
+const IRON_AGE = 103;
+const BALLISTICS = 106;
+const WOODWORKING = 107;
+const GOLD_MINING = 108;
+const STONE_MINING = 109;
+const CRAFTSMANSHIP = 110;
+const SIEGECRAFT = 111;
+const ARCHITECTURE = 112;
+const ARISTOCRACY = 113;
+const MONOTHEISM = 114;
+const IRON_SHIELD = 117;
+const MEDICINE = 119;
+const THEOCRACY = 120;
+const LOGISTICS = 121;
+const TOWER_SHIELD = 122;
+const CITY_WATCH = 128;
+const CONSCRIPTION = 129;
+const URBANIZATION = 150;
 
 class Tree {
     constructor() {
         this.offsets = {
-            dark_1_y: 0,
-            dark_2_y: 0,
-            feudal_1_y: 0,
-            feudal_2_y: 0,
-            castle_1_y: 0,
-            castle_2_y: 0,
-            imperial_1_y: 0,
-            imperial_2_y: 0
+            stone_1_y: 0,
+            stone_2_y: 0,
+            tool_1_y: 0,
+            tool_2_y: 0,
+            bronze_1_y: 0,
+            bronze_2_y: 0,
+            iron_1_y: 0,
+            iron_2_y: 0
         };
         this.height = Math.max(window.innerHeight - 80, 100);
         this.width = 0;
@@ -405,14 +175,14 @@ class Tree {
         this.element_height = this.height / 4 / 3;
         let element_offset = this.element_height / 2;
 
-        this.offsets.dark_1 = this.padding;
-        this.offsets.dark_2 = this.offsets.dark_1 + this.element_height + element_offset;
-        this.offsets.feudal_1 = this.offsets.dark_2 + this.element_height + element_offset;
-        this.offsets.feudal_2 = this.offsets.feudal_1 + this.element_height + element_offset;
-        this.offsets.castle_1 = this.offsets.feudal_2 + this.element_height + element_offset;
-        this.offsets.castle_2 = this.offsets.castle_1 + this.element_height + element_offset;
-        this.offsets.imperial_1 = this.offsets.castle_2 + this.element_height + element_offset;
-        this.offsets.imperial_2 = this.offsets.imperial_1 + this.element_height + element_offset;
+        this.offsets.stone_1 = this.padding;
+        this.offsets.stone_2 = this.offsets.stone_1 + this.element_height + element_offset;
+        this.offsets.tool_1 = this.offsets.stone_2 + this.element_height + element_offset;
+        this.offsets.tool_2 = this.offsets.tool_1 + this.element_height + element_offset;
+        this.offsets.bronze_1 = this.offsets.tool_2 + this.element_height + element_offset;
+        this.offsets.bronze_2 = this.offsets.bronze_1 + this.element_height + element_offset;
+        this.offsets.iron_1 = this.offsets.bronze_2 + this.element_height + element_offset;
+        this.offsets.iron_2 = this.offsets.iron_1 + this.element_height + element_offset;
     }
 
     updatePositions() {
@@ -436,14 +206,14 @@ class Tree {
 class Lane {
     constructor() {
         this.rows = {
-            dark_1: [],
-            dark_2: [],
-            feudal_1: [],
-            feudal_2: [],
-            castle_1: [],
-            castle_2: [],
-            imperial_1: [],
-            imperial_2: []
+            stone_1: [],
+            stone_2: [],
+            tool_1: [],
+            tool_2: [],
+            bronze_1: [],
+            bronze_2: [],
+            iron_1: [],
+            iron_2: []
         };
         this.x = 0;
         this.y = 0;
@@ -642,312 +412,219 @@ function tech(id) {
 function getDefaultTree() {
     let tree = new Tree();
     tree.updateOffsets();
-
-    let archerylane = new Lane();
-    archerylane.rows.feudal_1.push(building(ARCHERY_RANGE));
-    archerylane.rows.feudal_2.push(unit(ARCHER));
-    archerylane.rows.feudal_2.push(unit(SKIRMISHER));
-    archerylane.rows.castle_1.push(unit(CROSSBOWMAN));
-    archerylane.rows.castle_1.push(unit(ELITE_SKIRMISHER));
-    archerylane.rows.castle_1.push(uniqueunit(SLINGER));
-    archerylane.rows.castle_1.push(unit(CAVALRY_ARCHER));
-    archerylane.rows.castle_1.push(unit(ELEPHANT_ARCHER));
-    archerylane.rows.castle_1.push(uniqueunit(GENITOUR));
-    archerylane.rows.castle_1.push(tech(THUMB_RING));
-    archerylane.rows.imperial_1.push(unit(ARBALESTER));
-    archerylane.rows.imperial_1.push(uniqueunit(IMPERIAL_SKIRMISHER));
-    archerylane.rows.imperial_1.push(unit(HAND_CANNONEER));
-    archerylane.rows.imperial_1.push(unit(HEAVY_CAV_ARCHER));
-    archerylane.rows.imperial_1.push(unit(ELITE_ELEPHANT_ARCHER));
-    archerylane.rows.imperial_1.push(uniqueunit(ELITE_GENITOUR));
-    archerylane.rows.imperial_1.push(tech(PARTHIAN_TACTICS));
-    tree.lanes.push(archerylane);
-
-
-    let barrackslane = new Lane();
-    barrackslane.rows.dark_1.push(building(BARRACKS));
-    barrackslane.rows.dark_2.push(unit(MILITIA));
-    barrackslane.rows.feudal_1.push(unit(MAN_AT_ARMS));
-    barrackslane.rows.feudal_1.push(tech(SUPPLIES));
-    barrackslane.rows.feudal_1.push(unit(SPEARMAN));
-    barrackslane.rows.feudal_1.push(unit(EAGLE_SCOUT));
-    barrackslane.rows.castle_1.push(unit(LONG_SWORDSMAN));
-    barrackslane.rows.castle_1.push(tech(GAMBESONS));
-    barrackslane.rows.castle_1.push(unit(PIKEMAN));
-    barrackslane.rows.castle_1.push(unit(EAGLE_WARRIOR));
-    barrackslane.rows.castle_1.push(tech(SQUIRES));
-    barrackslane.rows.castle_1.push(tech(ARSON));
-    barrackslane.rows.imperial_1.push(unit(TWO_HANDED_SWORDSMAN));
-    barrackslane.rows.imperial_1.push(uniqueunit(LEGIONARY));
-    barrackslane.rows.imperial_2.push(unit(CHAMPION));
-    barrackslane.rows.imperial_1.push(unit(HALBERDIER));
-    barrackslane.rows.imperial_1.push(unit(ELITE_EAGLE_WARRIOR));
-    barrackslane.rows.imperial_1.push(uniqueunit(CONDOTTIERO));
-    barrackslane.rows.imperial_1.push(uniqueunit(FLEMISHPIKEMAN));
-    tree.lanes.push(barrackslane);
-
-
-    let stablelane = new Lane();
-    stablelane.rows.feudal_1.push(building(STABLE));
-    stablelane.rows.feudal_2.push(unit(SCOUT_CAVALRY));
-    stablelane.rows.feudal_2.push(tech(BLOODLINES));
-    stablelane.rows.feudal_2.push(uniqueunit(CAMEL_SCOUT));
-    stablelane.rows.castle_1.push(unit(LIGHT_CAVALRY));
-    stablelane.rows.castle_1.push(uniqueunit(SHRIVAMSHA_RIDER));
-    stablelane.rows.castle_1.push(unit(CAMEL_RIDER));
-    stablelane.rows.castle_1.push(unit(KNIGHT));
-    stablelane.rows.castle_1.push(unit(BATTLE_ELEPHANT));
-    stablelane.rows.castle_1.push(unit(STEPPE_LANCER));
-    stablelane.rows.castle_1.push(uniqueunit(XOLOTL_WARRIOR));
-    stablelane.rows.castle_1.push(tech(HUSBANDRY));
-    stablelane.rows.imperial_1.push(unit(HUSSAR));
-    stablelane.rows.imperial_1.push(uniqueunit(ELITE_SHRIVAMSHA_RIDER));
-    stablelane.rows.imperial_1.push(unit(HEAVY_CAMEL_RIDER));
-    stablelane.rows.imperial_1.push(unit(CAVALIER));
-    stablelane.rows.imperial_1.push(unit(ELITE_BATTLE_ELEPHANT));
-    stablelane.rows.imperial_1.push(unit(ELITE_STEPPE_LANCER));
-    stablelane.rows.imperial_2.push(uniqueunit(WINGED_HUSSAR));
-    stablelane.rows.imperial_2.push(uniqueunit(IMPERIAL_CAMEL_RIDER));
-    stablelane.rows.imperial_2.push(unit(PALADIN));
-    tree.lanes.push(stablelane);
-
-
-    let siegeworkshoplane = new Lane();
-    siegeworkshoplane.rows.castle_1.push(building(SIEGE_WORKSHOP));
-    siegeworkshoplane.rows.castle_2.push(unit(BATTERING_RAM));
-    siegeworkshoplane.rows.castle_2.push(unit(ARMORED_ELEPHANT));
-    siegeworkshoplane.rows.castle_2.push(unit(MANGONEL));
-    siegeworkshoplane.rows.castle_2.push(unit(SCORPION));
-    siegeworkshoplane.rows.castle_2.push(unit(SIEGE_TOWER));
-    siegeworkshoplane.rows.imperial_1.push(unit(CAPPED_RAM));
-    siegeworkshoplane.rows.imperial_1.push(unit(SIEGE_ELEPHANT));
-    siegeworkshoplane.rows.imperial_1.push(unit(ONAGER));
-    siegeworkshoplane.rows.imperial_1.push(unit(HEAVY_SCORPION));
-    siegeworkshoplane.rows.imperial_1.push(unit(BOMBARD_CANNON));
-    siegeworkshoplane.rows.imperial_2.push(unit(SIEGE_RAM));
-    siegeworkshoplane.rows.imperial_2.push(unit(SIEGE_ONAGER));
-    siegeworkshoplane.rows.imperial_2.push(uniqueunit(HOUFNICE));
+	
+	
+ 	let barrackslane = new Lane();
+	barrackslane.rows.stone_1.push(building(BARRACKS));
+	barrackslane.rows.stone_2.push(unit(CLUBMAN));
+	barrackslane.rows.tool_1.push(unit(AXEMAN));
+	barrackslane.rows.tool_1.push(unit(SLINGER));
+	barrackslane.rows.bronze_1.push(unit(SHORT_SWORDSMAN));
+	barrackslane.rows.bronze_2.push(unit(BROAD_SWORDSMAN));
+	barrackslane.rows.iron_1.push(unit(LONG_SWORDSMAN));
+	barrackslane.rows.iron_2.push(unit(LEGIONARY));
+	tree.lanes.push(barrackslane);
+	
+	
+ 	let archerylane = new Lane();
+	archerylane.rows.tool_1.push(building(ARCHERY_RANGE));
+	archerylane.rows.tool_2.push(unit(BOWMAN));
+	archerylane.rows.bronze_1.push(unit(CHARIOT_ARCHER));
+	archerylane.rows.bronze_1.push(unit(IMPROVED_BOWMAN));
+	archerylane.rows.bronze_2.push(unit(COMPOSITE_BOWMAN));
+	archerylane.rows.iron_1.push(unit(ELEPHANT_ARCHER));
+	tree.lanes.push(archerylane);
+	let horsearcherlane = new Lane();
+	horsearcherlane.rows.iron_1.push(unit(HORSE_ARCHER));
+	horsearcherlane.rows.iron_2.push(unit(HEAVY_HORSE_ARCHER));
+	tree.lanes.push(horsearcherlane);
+	
+	
+	let siegeworkshoplane = new Lane();
+	siegeworkshoplane.rows.bronze_1.push(building(SIEGE_WORKSHOP));
+	siegeworkshoplane.rows.bronze_2.push(unit(STONE_THROWER));
+	siegeworkshoplane.rows.iron_1.push(unit(CATAPULT));
+	siegeworkshoplane.rows.iron_1.push(unit(BALLISTA));
+	siegeworkshoplane.rows.iron_2.push(unit(HEAVY_CATAPULT));
+	siegeworkshoplane.rows.iron_2.push(unit(HELEPOLIS));
     tree.lanes.push(siegeworkshoplane);
-
-
-    let blacksmithlane = new Lane();
-    blacksmithlane.rows.feudal_1.push(building(BLACKSMITH));
-    blacksmithlane.rows.feudal_2.push(tech(PADDED_ARCHER_ARMOR));
-    blacksmithlane.rows.feudal_2.push(tech(FLETCHING));
-    blacksmithlane.rows.feudal_2.push(tech(FORGING));
-    blacksmithlane.rows.feudal_2.push(tech(SCALE_BARDING_ARMOR));
-    blacksmithlane.rows.feudal_2.push(tech(SCALE_MAIL_ARMOR));
-    blacksmithlane.rows.castle_1.push(tech(LEATHER_ARCHER_ARMOR));
-    blacksmithlane.rows.castle_1.push(tech(BODKIN_ARROW));
-    blacksmithlane.rows.castle_1.push(tech(IRON_CASTING));
-    blacksmithlane.rows.castle_1.push(tech(CHAIN_BARDING_ARMOR));
-    blacksmithlane.rows.castle_1.push(tech(CHAIN_MAIL_ARMOR));
-    blacksmithlane.rows.imperial_1.push(tech(RING_ARCHER_ARMOR));
-    blacksmithlane.rows.imperial_1.push(tech(BRACER));
-    blacksmithlane.rows.imperial_1.push(tech(BLAST_FURNACE));
-    blacksmithlane.rows.imperial_1.push(tech(PLATE_BARDING_ARMOR));
-    blacksmithlane.rows.imperial_1.push(tech(PLATE_MAIL_ARMOR));
-    tree.lanes.push(blacksmithlane);
-
-    let docklane = new Lane();
-    docklane.rows.dark_1.push(building(DOCK));
-    docklane.rows.dark_2.push(unit(FISHING_SHIP));
-    docklane.rows.dark_2.push(unit(TRANSPORT_SHIP));
-    docklane.rows.feudal_1.push(unit(FIRE_GALLEY));
-    docklane.rows.feudal_1.push(unit(TRADE_COG));
-    docklane.rows.feudal_1.push(unit(DEMOLITION_RAFT));
-    docklane.rows.feudal_1.push(unit(GALLEY));
-    docklane.rows.castle_1.push(unit(FIRE_SHIP));
-    docklane.rows.castle_1.push(tech(GILLNETS));
-    docklane.rows.castle_1.push(unit(DEMOLITION_SHIP));
-    docklane.rows.castle_1.push(unit(WAR_GALLEY));
-    docklane.rows.castle_1.push(uniqueunit(TURTLE_SHIP));
-    docklane.rows.castle_1.push(uniqueunit(LONGBOAT));
-    docklane.rows.castle_1.push(uniqueunit(CARAVEL));
-    docklane.rows.castle_1.push(tech(CAREENING));
-    docklane.rows.imperial_1.push(unit(FAST_FIRE_SHIP));
-    docklane.rows.imperial_1.push(unit(CANNON_GALLEON));
-    docklane.rows.imperial_1.push(unit(HEAVY_DEMO_SHIP));
-    docklane.rows.imperial_1.push(unit(GALLEON));
-    docklane.rows.imperial_1.push(unit(DROMON));
-    docklane.rows.imperial_1.push(uniqueunit(ELITE_TURTLE_SHIP));
-    docklane.rows.imperial_1.push(uniqueunit(ELITE_LONGBOAT));
-    docklane.rows.imperial_1.push(uniqueunit(ELITE_CARAVEL));
-    docklane.rows.imperial_1.push(uniqueunit(THIRISADAI));
-    docklane.rows.imperial_1.push(tech(DRY_DOCK));
-    docklane.rows.imperial_1.push(tech(SHIPWRIGHT));
-    docklane.rows.imperial_2.push(unit(ELITE_CANNON_GALLEON));
-    tree.lanes.push(docklane);
-
-
-    let fishtraplane = new Lane();
-    fishtraplane.rows.feudal_1.push(building(FISH_TRAP));
-    fishtraplane.rows.castle_1.push(building(HARBOR));
-    tree.lanes.push(fishtraplane);
-
-
-    let universitylane = new Lane();
-    universitylane.rows.castle_1.push(building(UNIVERSITY));
-    universitylane.rows.castle_2.push(tech(MASONRY));
-    universitylane.rows.castle_2.push(tech(FORTIFIED_WALL_TECH));
-    universitylane.rows.castle_2.push(tech(BALLISTICS));
-    universitylane.rows.castle_2.push(tech(GUARD_TOWER_TECH));
-    universitylane.rows.castle_2.push(tech(HEATED_SHOT));
-    universitylane.rows.castle_2.push(tech(MURDER_HOLES));
-    universitylane.rows.castle_2.push(tech(TREADMILL_CRANE));
-    universitylane.rows.imperial_1.push(tech(ARCHITECTURE));
-    universitylane.rows.imperial_1.push(tech(CHEMISTRY));
-    universitylane.rows.imperial_1.push(tech(SIEGE_ENGINEERS));
-    universitylane.rows.imperial_1.push(tech(KEEP_TECH));
-    universitylane.rows.imperial_1.push(tech(ARROWSLITS));
-    universitylane.rows.imperial_2.push(tech(BOMBARD_TOWER_TECH));
-    tree.lanes.push(universitylane);
-
-
-    let towerlane = new Lane();
-    towerlane.rows.dark_1.push(building(OUTPOST));
-    towerlane.rows.feudal_1.push(building(WATCH_TOWER));
-    towerlane.rows.castle_1.push(building(GUARD_TOWER));
-    towerlane.rows.imperial_1.push(building(KEEP));
-    towerlane.rows.imperial_2.push(building(BOMBARD_TOWER));
-    tree.lanes.push(towerlane);
+	
+	
+	let scoutlane = new Lane();
+	scoutlane.rows.tool_2.push(unit(SCOUT));
+	tree.lanes.push(scoutlane);
+	let stablelane = new Lane();
+	stablelane.rows.tool_1.push(building(STABLE));
+	stablelane.rows.bronze_1.push(unit(CHARIOT));
+	stablelane.rows.bronze_1.push(unit(CAVALRY));
+	stablelane.rows.bronze_1.push(unit(CAMEL_RIDER));
+	stablelane.rows.iron_1.push(unit(SCYTHE_CHARIOT));
+	stablelane.rows.iron_1.push(unit(HEAVY_CAVALRY));
+	stablelane.rows.iron_1.push(unit(WAR_ELEPHANT));
+	stablelane.rows.iron_2.push(unit(CATAPHRACT));
+	stablelane.rows.iron_2.push(unit(ARMORED_ELEPHANT));
+	tree.lanes.push(stablelane);
+	
+	
+	let academylane = new Lane();
+	academylane.rows.bronze_1.push(building(ACADEMY));
+	academylane.rows.bronze_2.push(unit(HOPLITE));
+	academylane.rows.iron_1.push(unit(PHALANGITE));
+	academylane.rows.iron_2.push(unit(CENTURION));
+	tree.lanes.push(academylane);
+	
+	
+	let storagepitlane = new Lane();
+	storagepitlane.rows.stone_1.push(building(STORAGE_PIT));
+	storagepitlane.rows.tool_1.push(tech(TOOLWORKING));
+	storagepitlane.rows.tool_1.push(tech(INFANTRY_LEATHER_ARMOR));
+	storagepitlane.rows.tool_1.push(tech(ARCHER_LEATHER_ARMOR));
+	storagepitlane.rows.tool_1.push(tech(CAVALRY_LEATHER_ARMOR));
+	storagepitlane.rows.bronze_1.push(tech(METALWORKING));
+	storagepitlane.rows.bronze_1.push(tech(INFANTRY_SCALE_ARMOR));
+	storagepitlane.rows.bronze_1.push(tech(ARCHER_SCALE_ARMOR));
+	storagepitlane.rows.bronze_1.push(tech(CAVALRY_SCALE_ARMOR));
+	storagepitlane.rows.bronze_1.push(tech(BRONZE_SHIELD));
+	storagepitlane.rows.iron_1.push(tech(METALLURGY));
+	storagepitlane.rows.iron_1.push(tech(INFANTRY_CHAIN_MAIL));
+	storagepitlane.rows.iron_1.push(tech(ARCHER_CHAIN_MAIL));
+	storagepitlane.rows.iron_1.push(tech(CAVALRY_CHAIN_MAIL));
+	storagepitlane.rows.iron_1.push(tech(IRON_SHIELD));
+	storagepitlane.rows.iron_2.push(tech(TOWER_SHIELD));
+	tree.lanes.push(storagepitlane);
+	
+	
+	let granarylane = new Lane();
+	granarylane.rows.stone_1.push(building(GRANARY));
+	granarylane.rows.tool_1.push(tech(SMALL_WALL_TECH));
+	granarylane.rows.tool_1.push(tech(WATCH_TOWER_TECH));
+	granarylane.rows.bronze_1.push(tech(MEDIUM_WALL_TECH));
+	granarylane.rows.bronze_1.push(tech(SENTRY_TOWER_TECH));
+	granarylane.rows.iron_1.push(tech(FORTIFIED_WALL_TECH));
+	granarylane.rows.iron_1.push(tech(GUARD_TOWER_TECH));
+	granarylane.rows.iron_2.push(tech(BALLISTA_TOWER_TECH));
+	tree.lanes.push(granarylane);
 
 
     let walllane = new Lane();
-    walllane.rows.dark_1.push(building(PALISADE_WALL));
-    walllane.rows.dark_2.push(building(PALISADE_GATE));
-    walllane.rows.feudal_1.push(building(GATE));
-    walllane.rows.feudal_2.push(building(STONE_WALL));
-    walllane.rows.castle_1.push(building(FORTIFIED_WALL));
+    walllane.rows.tool_1.push(building(SMALL_WALL));
+    walllane.rows.bronze_1.push(building(MEDIUM_WALL));
+    walllane.rows.iron_1.push(building(FORTIFIED_WALL));
     tree.lanes.push(walllane);
 
 
-    let castlelane = new Lane();
-    castlelane.rows.castle_1.push(building(CASTLE));
-    castlelane.rows.castle_2.push(new Caret(TYPES.UNIQUEUNIT, UNIQUE_UNIT, UNIQUE_UNIT));
-    castlelane.rows.castle_2.push(unit(PETARD));
-    castlelane.rows.castle_2.push(tech(UNIQUE_TECH_1));
-    castlelane.rows.imperial_1.push(new Caret(TYPES.UNIQUEUNIT, ELITE_UNIQUE_UNIT, ELITE_UNIQUE_UNIT));
-    castlelane.rows.imperial_1.push(unit(TREBUCHET));
-    castlelane.rows.imperial_1.push(uniqueunit(FLAMING_CAMEL));
-    castlelane.rows.imperial_1.push(tech(UNIQUE_TECH_2));
-    castlelane.rows.imperial_1.push(tech(HOARDINGS));
-    castlelane.rows.imperial_1.push(tech(SAPPERS));
-    castlelane.rows.imperial_1.push(tech(CONSCRIPTION));
-    castlelane.rows.imperial_1.push(tech(SPIES_TREASON));
-    tree.lanes.push(castlelane);
+    let towerlane = new Lane();
+    towerlane.rows.tool_1.push(building(WATCH_TOWER));
+    towerlane.rows.bronze_1.push(building(SENTRY_TOWER));
+    towerlane.rows.iron_1.push(building(GUARD_TOWER));
+    towerlane.rows.iron_2.push(building(BALLISTA_TOWER));
+    tree.lanes.push(towerlane);
 
 
-    let krepostlane = new Lane();
-    krepostlane.rows.castle_1.push(building(KREPOST));
-    krepostlane.rows.castle_2.push(uniqueunit(KONNIK_2));
-    krepostlane.rows.imperial_1.push(uniqueunit(ELITE_KONNIK_2));
-    tree.lanes.push(krepostlane);
-
-
-    let donjonlane = new Lane();
-    donjonlane.rows.feudal_1.push(building(DONJON));
-    donjonlane.rows.feudal_2.push(uniqueunit(DSERJEANT));
-    donjonlane.rows.feudal_2.push(unit(DSPEARMAN));
-    donjonlane.rows.castle_1.push(unit(DPIKEMAN));
-    donjonlane.rows.imperial_1.push(uniqueunit(ELITE_DSERJEANT));
-    donjonlane.rows.imperial_1.push(unit(DHALBERDIER));
-    tree.lanes.push(donjonlane);
-
-
-    let monasterylane = new Lane();
-    monasterylane.rows.castle_1.push(building(MONASTERY));
-    monasterylane.rows.castle_2.push(unit(MONK));
-    monasterylane.rows.castle_2.push(uniqueunit(MISSIONARY));
-    monasterylane.rows.castle_2.push(tech(REDEMPTION));
-    monasterylane.rows.castle_2.push(tech(ATONEMENT));
-    monasterylane.rows.castle_2.push(tech(HERBAL_MEDICINE));
-    monasterylane.rows.castle_2.push(tech(HERESY));
-    monasterylane.rows.castle_2.push(tech(SANCTITY));
-    monasterylane.rows.castle_2.push(tech(FERVOR));
-    monasterylane.rows.imperial_1.push(tech(FAITH));
-    monasterylane.rows.imperial_1.push(tech(ILLUMINATION));
-    monasterylane.rows.imperial_1.push(tech(BLOCK_PRINTING));
-    monasterylane.rows.imperial_1.push(tech(THEOCRACY));
-    tree.lanes.push(monasterylane);
-
-
-    let houselane = new Lane();
-    houselane.rows.dark_1.push(building(HOUSE));
-    tree.lanes.push(houselane);
-
-    let towncenterlane = new Lane();
-    towncenterlane.rows.dark_1.push(building(TOWN_CENTER));
-    towncenterlane.rows.dark_2.push(unit(VILLAGER));
-    towncenterlane.rows.dark_2.push(tech(FEUDAL_AGE));
-    towncenterlane.rows.dark_2.push(tech(LOOM));
-    towncenterlane.rows.feudal_1.push(tech(TOWN_WATCH));
-    towncenterlane.rows.feudal_1.push(tech(CASTLE_AGE));
-    towncenterlane.rows.feudal_1.push(tech(WHEELBARROW));
-    towncenterlane.rows.castle_1.push(tech(TOWN_PATROL));
-    towncenterlane.rows.castle_1.push(tech(IMPERIAL_AGE));
-    towncenterlane.rows.castle_1.push(tech(HAND_CART));
-    tree.lanes.push(towncenterlane);
-
-
-    let additionaltowncenterlane = new Lane();
-    additionaltowncenterlane.rows.castle_1.push(building(TOWN_CENTER_2));
-    tree.lanes.push(additionaltowncenterlane);
-
-
-    let wonderlane = new Lane();
-    wonderlane.rows.imperial_1.push(building(WONDER));
-    tree.lanes.push(wonderlane);
-
-
-    let feitorialane = new Lane();
-    feitorialane.rows.imperial_1.push(building(FEITORIA));
-    tree.lanes.push(feitorialane);
-
-    let caravanserailane = new Lane();
-    caravanserailane.rows.imperial_1.push(building(CARAVANSERAI));
-    tree.lanes.push(caravanserailane);
-
-
-    let miningcamplane = new Lane();
-    miningcamplane.rows.dark_1.push(building(MINING_CAMP));
-    miningcamplane.rows.feudal_1.push(tech(GOLD_MINING));
-    miningcamplane.rows.feudal_1.push(tech(STONE_MINING));
-    miningcamplane.rows.castle_1.push(tech(GOLD_SHAFT_MINING));
-    miningcamplane.rows.castle_1.push(tech(STONE_SHAFT_MINING));
-    tree.lanes.push(miningcamplane);
-
-
-    let lumbercamplane = new Lane();
-    lumbercamplane.rows.dark_1.push(building(LUMBER_CAMP));
-    lumbercamplane.rows.feudal_1.push(tech(DOUBLE_BIT_AXE));
-    lumbercamplane.rows.castle_1.push(tech(BOW_SAW));
-    lumbercamplane.rows.imperial_1.push(tech(TWO_MAN_SAW));
-    tree.lanes.push(lumbercamplane);
+    let gatelane = new Lane();
+    gatelane.rows.tool_1.push(building(SMALL_GATE));
+    gatelane.rows.bronze_1.push(building(MEDIUM_GATE));
+    gatelane.rows.iron_1.push(building(FORTIFIED_GATE));
+    tree.lanes.push(gatelane);
 
 
     let marketlane = new Lane();
-    marketlane.rows.feudal_1.push(building(MARKET));
-    marketlane.rows.feudal_2.push(unit(TRADE_CART));
-    marketlane.rows.castle_1.push(tech(COINAGE));
-    marketlane.rows.castle_1.push(tech(CARAVAN));
-    marketlane.rows.imperial_1.push(tech(BANKING));
-    marketlane.rows.imperial_1.push(tech(GUILDS));
+    marketlane.rows.tool_1.push(building(MARKET));
+    marketlane.rows.tool_2.push(tech(WOODWORKING));
+	marketlane.rows.tool_2.push(tech(STONE_MINING));
+	marketlane.rows.tool_2.push(tech(GOLD_MINING));
+	marketlane.rows.tool_2.push(tech(DOMESTICATION));
+	marketlane.rows.bronze_1.push(tech(ARTISANSHIP));
+	marketlane.rows.bronze_1.push(tech(PLOW));
+	marketlane.rows.iron_1.push(tech(CRAFTSMANSHIP));
+	marketlane.rows.iron_1.push(tech(SIEGECRAFT));
+	marketlane.rows.iron_1.push(tech(COINAGE));
+	marketlane.rows.iron_1.push(tech(IRRIGATION));
     tree.lanes.push(marketlane);
+	let wheellane = new Lane();
+	wheellane.rows.bronze_1.push(tech(WHEEL));
+	wheellane.rows.bronze_2.push(unit(TRADE_CART));
+	tree.lanes.push(wheellane);
 
 
     let farmlane = new Lane();
-    farmlane.rows.dark_1.push(building(FOLWARK));
-    farmlane.rows.dark_2.push(building(FARM));
+    farmlane.rows.tool_2.push(building(FARM));
     tree.lanes.push(farmlane);
+	
+	
+	let governmentcenterlane = new Lane();
+	governmentcenterlane.rows.bronze_1.push(building(GOVERNMENT_CENTER));
+	governmentcenterlane.rows.bronze_2.push(tech(NOBILITY));
+	governmentcenterlane.rows.bronze_2.push(tech(WRITING));
+	governmentcenterlane.rows.bronze_2.push(tech(ARCHITECTURE));
+	governmentcenterlane.rows.bronze_2.push(tech(LOGISTICS));
+	governmentcenterlane.rows.bronze_2.push(tech(CITY_WATCH));
+	governmentcenterlane.rows.iron_1.push(tech(ARISTOCRACY));
+	governmentcenterlane.rows.iron_1.push(tech(BALLISTICS));
+	governmentcenterlane.rows.iron_1.push(tech(ALCHEMY));
+	governmentcenterlane.rows.iron_1.push(tech(ENGINEERING));
+	governmentcenterlane.rows.iron_1.push(tech(CONSCRIPTION));
+	governmentcenterlane.rows.iron_2.push(tech(URBANIZATION));
+	tree.lanes.push(governmentcenterlane);
+	
+	let newtowncenterlane = new Lane()
+	newtowncenterlane.rows.bronze_2.push(building(TOWN_CENTER_2));
+	tree.lanes.push(newtowncenterlane);
+	
+	
+	let templelane = new Lane();
+	templelane.rows.bronze_1.push(building(TEMPLE));
+	templelane.rows.bronze_2.push(tech(ASTROLOGY));
+	templelane.rows.bronze_2.push(tech(MYSTICISM));
+	templelane.rows.bronze_2.push(tech(POLYTHEISM));
+	templelane.rows.bronze_2.push(unit(PRIEST));
+	templelane.rows.iron_1.push(tech(AFTERLIFE));
+	templelane.rows.iron_1.push(tech(MONOTHEISM));
+	templelane.rows.iron_1.push(tech(FANATICISM));
+	templelane.rows.iron_1.push(tech(ZEALOTRY));
+	templelane.rows.iron_2.push(tech(MEDICINE));
+	templelane.rows.iron_2.push(tech(THEOCRACY));
+	tree.lanes.push(templelane);
 
 
-    let milllane = new Lane();
-    milllane.rows.dark_1.push(building(MILL));
-    milllane.rows.feudal_1.push(tech(HORSE_COLLAR));
-    milllane.rows.castle_1.push(tech(HEAVY_PLOW));
-    milllane.rows.imperial_1.push(tech(CROP_ROTATION));
-    tree.lanes.push(milllane);
+    let wonderlane = new Lane();
+    wonderlane.rows.iron_1.push(building(WONDER));
+    tree.lanes.push(wonderlane);
+	
+
+    let towncenterlane = new Lane();
+    towncenterlane.rows.stone_1.push(building(TOWN_CENTER));
+    towncenterlane.rows.stone_2.push(unit(VILLAGER));
+    towncenterlane.rows.stone_2.push(tech(TOOL_AGE));
+    towncenterlane.rows.tool_1.push(tech(BRONZE_AGE));
+    towncenterlane.rows.bronze_1.push(tech(IRON_AGE));
+    tree.lanes.push(towncenterlane);
+
+
+    let houselane = new Lane();
+    houselane.rows.stone_1.push(building(HOUSE));
+    tree.lanes.push(houselane);
+	
+
+	let fishinglane = new Lane();
+	fishinglane.rows.stone_2.push(unit(FISHING_BOAT));
+	fishinglane.rows.bronze_1.push(unit(FISHING_SHIP));
+	tree.lanes.push(fishinglane);
+    let docklane = new Lane();
+    docklane.rows.stone_1.push(building(DOCK));
+	docklane.rows.tool_1.push(unit(LIGHT_TRANSPORT));
+	docklane.rows.tool_1.push(unit(SCOUT_SHIP));
+	docklane.rows.bronze_1.push(unit(WAR_GALLEY));
+	docklane.rows.iron_1.push(unit(HEAVY_TRANSPORT));
+	docklane.rows.iron_1.push(unit(TRIREME));
+	docklane.rows.iron_2.push(unit(FIRE_GALLEY));
+	tree.lanes.push(docklane);
+	let tradeboatlane = new Lane();
+	tradeboatlane.rows.bronze_1.push(unit(TRADE_BOAT));
+	tradeboatlane.rows.bronze_2.push(unit(MERCHANT_SHIP));
+	tradeboatlane.rows.iron_1.push(unit(CATAPULT_TRIREME));
+	tradeboatlane.rows.iron_2.push(unit(JUGGERNAUT));
+    tree.lanes.push(tradeboatlane);
 
 
     tree.updatePositions();
@@ -971,170 +648,124 @@ function t(tech) {
 
 function getConnections() {
     let connections = [
-        [b(ARCHERY_RANGE), u(ARCHER)],
-        [u(ARCHER), u(CROSSBOWMAN)],
-        [u(CROSSBOWMAN), u(ARBALESTER)],
-        [b(ARCHERY_RANGE), u(SKIRMISHER)],
-        [u(SKIRMISHER), u(ELITE_SKIRMISHER)],
-        [b(ARCHERY_RANGE), u(CAVALRY_ARCHER)],
-        [u(CAVALRY_ARCHER), u(HEAVY_CAV_ARCHER)],
-        [b(ARCHERY_RANGE), u(ELEPHANT_ARCHER)],
-        [u(ELEPHANT_ARCHER), u(ELITE_ELEPHANT_ARCHER)],
-        [b(ARCHERY_RANGE), t(THUMB_RING)],
+		[b(ARCHERY_RANGE), b(SIEGE_WORKSHOP)],
+		[b(ARCHERY_RANGE), u(BOWMAN)],
+//		[b(ARCHERY_RANGE), u(CHARIOT_ARCHER)],
+		[b(ARCHERY_RANGE), u(IMPROVED_BOWMAN)],
+		[u(IMPROVED_BOWMAN), u(COMPOSITE_BOWMAN)],
+//		[b(ARCHERY_RANGE), u(ELEPHANT_ARCHER)],
+		[b(ARCHERY_RANGE), u(HORSE_ARCHER)],
+		[u(HORSE_ARCHER), u(HEAVY_HORSE_ARCHER)],
+		[b(SIEGE_WORKSHOP), u(STONE_THROWER)],
+		[u(STONE_THROWER), u(CATAPULT)],
+		[u(CATAPULT), u(HEAVY_CATAPULT)],
+		[b(SIEGE_WORKSHOP), u(BALLISTA)],
+		[u(BALLISTA), u(HELEPOLIS)],
         [b(BARRACKS), b(ARCHERY_RANGE)],
         [b(BARRACKS), b(STABLE)],
-        [b(BARRACKS), u(MILITIA)],
-        [u(MILITIA), u(MAN_AT_ARMS)],
-        [u(MAN_AT_ARMS), u(LONG_SWORDSMAN)],
-        [u(LONG_SWORDSMAN), u(TWO_HANDED_SWORDSMAN)],
-        [u(LONG_SWORDSMAN), u(LEGIONARY)],
-        [u(TWO_HANDED_SWORDSMAN), u(CHAMPION)],
-        [b(BARRACKS), u(SPEARMAN)],
-        [u(SPEARMAN), u(PIKEMAN)],
-        [u(PIKEMAN), u(HALBERDIER)],
-        [b(BARRACKS), u(EAGLE_SCOUT)],
-        [u(EAGLE_SCOUT), u(EAGLE_WARRIOR)],
-        [u(EAGLE_WARRIOR), u(ELITE_EAGLE_WARRIOR)],
-        [b(BARRACKS), t(SUPPLIES)],
-        [t(SUPPLIES), t(GAMBESONS)],
-        [b(BARRACKS), t(SQUIRES)],
-        [b(BARRACKS), t(ARSON)],
-        [b(STABLE), u(SCOUT_CAVALRY)],
-        [u(SCOUT_CAVALRY), u(LIGHT_CAVALRY)],
-        [u(LIGHT_CAVALRY), u(HUSSAR)],
-        [u(LIGHT_CAVALRY), u(WINGED_HUSSAR)],
-        [u(SHRIVAMSHA_RIDER), u(ELITE_SHRIVAMSHA_RIDER)],
-        [b(STABLE), u(CAMEL_SCOUT)],
-        [b(STABLE), t(BLOODLINES)],
-        [b(STABLE), u(CAMEL_RIDER)],
-        [u(CAMEL_RIDER), u(HEAVY_CAMEL_RIDER)],
-        [b(STABLE), u(BATTLE_ELEPHANT)],
-        [u(BATTLE_ELEPHANT), u(ELITE_BATTLE_ELEPHANT)],
-        [b(STABLE), u(STEPPE_LANCER)],
-        [u(STEPPE_LANCER), u(ELITE_STEPPE_LANCER)],
-        [b(STABLE), u(XOLOTL_WARRIOR)],
-        [b(STABLE), t(HUSBANDRY)],
-        [b(STABLE), u(KNIGHT)],
-        [u(KNIGHT), u(CAVALIER)],
-        [u(CAVALIER), u(PALADIN)],
-        [b(DOCK), u(FISHING_SHIP)],
-        [b(DOCK), u(TRANSPORT_SHIP)],
-        [b(DOCK), u(DROMON)],
-        [b(DOCK), u(DEMOLITION_RAFT)],
-        [u(DEMOLITION_RAFT), u(DEMOLITION_SHIP)],
-        [u(DEMOLITION_SHIP), u(HEAVY_DEMO_SHIP)],
-        [b(DOCK), u(GALLEY)],
-        [u(GALLEY), u(WAR_GALLEY)],
-        [u(WAR_GALLEY), u(GALLEON)],
-        [b(DOCK), t(CAREENING)],
-        [t(CAREENING), t(DRY_DOCK)],
-        [b(DOCK), t(SHIPWRIGHT)],
-        [b(DOCK), b(FISH_TRAP)],
-        [u(FIRE_GALLEY), u(FIRE_SHIP)],
-        [u(FIRE_SHIP), u(FAST_FIRE_SHIP)],
-        [u(CANNON_GALLEON), u(ELITE_CANNON_GALLEON)],
-        [b(WATCH_TOWER), b(GUARD_TOWER)],
-        [b(GUARD_TOWER), b(KEEP)],
-        [b(STONE_WALL), b(FORTIFIED_WALL)],
-        [b(MONASTERY), u(MONK)],
-        [b(MONASTERY), t(REDEMPTION)],
-        [b(MONASTERY), t(ATONEMENT)],
-        [b(MONASTERY), t(HERBAL_MEDICINE)],
-        [b(MONASTERY), t(HERESY)],
-        [b(MONASTERY), t(SANCTITY)],
-        [b(MONASTERY), t(FERVOR)],
-        [b(CASTLE), u(UNIQUE_UNIT)],
-        [u(UNIQUE_UNIT), u(ELITE_UNIQUE_UNIT)],
-        [b(CASTLE), u(PETARD)],
-        [b(CASTLE), t(UNIQUE_TECH_1)],
-        [b(CASTLE), t(UNIQUE_TECH_2)],
-        [b(CASTLE), t(HOARDINGS)],
-        [b(CASTLE), t(SAPPERS)],
-        [b(CASTLE), t(CONSCRIPTION)],
-        [b(CASTLE), t(SPIES_TREASON)],
-        [b(KREPOST), u(KONNIK_2)],
-        [u(KONNIK_2), u(ELITE_KONNIK_2)],
-        [b(DONJON), u(DSERJEANT)],
-        [u(DSERJEANT), u(ELITE_DSERJEANT)],
-        [b(DONJON), u(DSPEARMAN)],
-        [u(DSPEARMAN), u(DPIKEMAN)],
-        [u(DPIKEMAN), u(DHALBERDIER)],
-        [b(TOWN_CENTER), u(VILLAGER)],
-        [b(TOWN_CENTER), t(FEUDAL_AGE)],
-        [t(FEUDAL_AGE), t(CASTLE_AGE)],
-        [t(CASTLE_AGE), t(IMPERIAL_AGE)],
-        [b(TOWN_CENTER), t(LOOM)],
-        [t(TOWN_WATCH), t(TOWN_PATROL)],
-        [t(WHEELBARROW), t(HAND_CART)],
-        [b(SIEGE_WORKSHOP), u(MANGONEL)],
-        [u(MANGONEL), u(ONAGER)],
-        [u(ONAGER), u(SIEGE_ONAGER)],
-        [b(SIEGE_WORKSHOP), u(BATTERING_RAM)],
-        [u(BATTERING_RAM), u(CAPPED_RAM)],
-        [u(CAPPED_RAM), u(SIEGE_RAM)],
-        [b(SIEGE_WORKSHOP), u(ARMORED_ELEPHANT)],
-        [u(ARMORED_ELEPHANT), u(SIEGE_ELEPHANT)],
-        [b(SIEGE_WORKSHOP), u(SCORPION)],
-        [u(SCORPION), u(HEAVY_SCORPION)],
-        [b(SIEGE_WORKSHOP), u(SIEGE_TOWER)],
-        [u(BOMBARD_CANNON), u(HOUFNICE)],
-        [b(BLACKSMITH), b(SIEGE_WORKSHOP)],
-        [b(BLACKSMITH), t(PADDED_ARCHER_ARMOR)],
-        [t(PADDED_ARCHER_ARMOR), t(LEATHER_ARCHER_ARMOR)],
-        [t(LEATHER_ARCHER_ARMOR), t(RING_ARCHER_ARMOR)],
-        [b(BLACKSMITH), t(FLETCHING)],
-        [t(FLETCHING), t(BODKIN_ARROW)],
-        [t(BODKIN_ARROW), t(BRACER)],
-        [b(BLACKSMITH), t(FORGING)],
-        [t(FORGING), t(IRON_CASTING)],
-        [t(IRON_CASTING), t(BLAST_FURNACE)],
-        [b(BLACKSMITH), t(SCALE_BARDING_ARMOR)],
-        [t(SCALE_BARDING_ARMOR), t(CHAIN_BARDING_ARMOR)],
-        [t(CHAIN_BARDING_ARMOR), t(PLATE_BARDING_ARMOR)],
-        [b(BLACKSMITH), t(SCALE_MAIL_ARMOR)],
-        [t(SCALE_MAIL_ARMOR), t(CHAIN_MAIL_ARMOR)],
-        [t(CHAIN_MAIL_ARMOR), t(PLATE_MAIL_ARMOR)],
-        [b(UNIVERSITY), t(MASONRY)],
-        [t(MASONRY), t(ARCHITECTURE)],
-        [b(UNIVERSITY), t(FORTIFIED_WALL_TECH)],
-        [b(UNIVERSITY), t(BALLISTICS)],
-        [b(UNIVERSITY), t(GUARD_TOWER_TECH)],
-        [t(GUARD_TOWER_TECH), t(KEEP_TECH)],
-        [b(UNIVERSITY), t(HEATED_SHOT)],
-        [b(UNIVERSITY), t(MURDER_HOLES)],
-        [b(UNIVERSITY), t(TREADMILL_CRANE)],
-        [t(CHEMISTRY), t(BOMBARD_TOWER_TECH)],
-        [b(MINING_CAMP), t(STONE_MINING)],
-        [t(STONE_MINING), t(STONE_SHAFT_MINING)],
-        [b(MINING_CAMP), t(GOLD_MINING)],
-        [t(GOLD_MINING), t(GOLD_SHAFT_MINING)],
-        [b(LUMBER_CAMP), t(DOUBLE_BIT_AXE)],
-        [t(DOUBLE_BIT_AXE), t(BOW_SAW)],
-        [t(BOW_SAW), t(TWO_MAN_SAW)],
-        [b(MARKET), t(CARAVAN)],
-        [t(COINAGE), t(BANKING)],
-        [b(MARKET), u(TRADE_CART)],
-        [b(MILL), b(MARKET)],
-        [b(FOLWARK), b(MARKET)],
-        [b(MILL), t(HORSE_COLLAR)],
-        [b(FOLWARK), t(HORSE_COLLAR)],
-        [t(HORSE_COLLAR), t(HEAVY_PLOW)],
-        [t(HEAVY_PLOW), t(CROP_ROTATION)],
-        [b(MILL), b(FARM)],
-        [b(FOLWARK), b(FARM)],
-        [u(GENITOUR), u(ELITE_GENITOUR)],
-        [u(HEAVY_CAMEL_RIDER), u(IMPERIAL_CAMEL_RIDER)],
-        [u(TURTLE_SHIP), u(ELITE_TURTLE_SHIP)],
-        [u(LONGBOAT), u(ELITE_LONGBOAT)],
-        [u(ELITE_SKIRMISHER), u(IMPERIAL_SKIRMISHER)],
-        [b(MONASTERY), u(MISSIONARY)],
-        [u(CARAVEL), u(ELITE_CARAVEL)],
-        [b(DOCK), u(CARAVEL)],
-        [b(DOCK), u(TURTLE_SHIP)],
-        [b(ARCHERY_RANGE), u(SLINGER)],
-        [b(ARCHERY_RANGE), u(GENITOUR)],
-        [b(DOCK), u(LONGBOAT)],
-        [b(DOCK), u(THIRISADAI)],
+        [b(BARRACKS), u(CLUBMAN)],
+        [u(CLUBMAN), u(AXEMAN)],
+		[b(BARRACKS), u(SLINGER)],
+//		[b(BARRACKS), u(SHORT_SWORDSMAN)],
+		[u(SHORT_SWORDSMAN), u(BROAD_SWORDSMAN)],
+		[u(BROAD_SWORDSMAN), u(LONG_SWORDSMAN)],
+		[u(LONG_SWORDSMAN), u(LEGIONARY)],
+		[b(STABLE), b(ACADEMY)],
+		[b(STABLE), u(SCOUT)],
+		[b(STABLE), u(CHARIOT)],
+		[u(CHARIOT), u(SCYTHE_CHARIOT)],
+		[b(STABLE), u(CAVALRY)],
+		[u(CAVALRY), u(HEAVY_CAVALRY)],
+		[u(HEAVY_CAVALRY), u(CATAPHRACT)],
+		[b(STABLE), u(CAMEL_RIDER)],
+//		[b(STABLE), u(WAR_ELEPHANT)],
+		[u(WAR_ELEPHANT), u(ARMORED_ELEPHANT)],
+		[b(ACADEMY), u(HOPLITE)],
+		[u(HOPLITE), u(PHALANGITE)],
+		[u(PHALANGITE), u(CENTURION)],
+		[b(STORAGE_PIT), t(TOOLWORKING)],
+		[t(TOOLWORKING), t(METALWORKING)],
+		[t(METALWORKING), t(METALLURGY)],
+		[b(STORAGE_PIT), t(INFANTRY_LEATHER_ARMOR)],
+		[t(INFANTRY_LEATHER_ARMOR), t(INFANTRY_SCALE_ARMOR)],
+		[t(INFANTRY_SCALE_ARMOR), t(INFANTRY_CHAIN_MAIL)],
+		[b(STORAGE_PIT), t(ARCHER_LEATHER_ARMOR)],
+		[t(ARCHER_LEATHER_ARMOR), t(ARCHER_SCALE_ARMOR)],
+		[t(ARCHER_SCALE_ARMOR), t(ARCHER_CHAIN_MAIL)],
+		[b(STORAGE_PIT), t(CAVALRY_LEATHER_ARMOR)],
+		[t(CAVALRY_LEATHER_ARMOR), t(CAVALRY_SCALE_ARMOR)],
+		[t(CAVALRY_SCALE_ARMOR), t(CAVALRY_CHAIN_MAIL)],
+		[b(STORAGE_PIT), t(BRONZE_SHIELD)],
+		[t(BRONZE_SHIELD), t(IRON_SHIELD)],
+		[t(IRON_SHIELD), t(TOWER_SHIELD)],
+		[b(GRANARY), b(MARKET)],
+		[b(GRANARY), t(SMALL_WALL_TECH)],
+		[t(SMALL_WALL_TECH), t(MEDIUM_WALL_TECH)],
+		[t(MEDIUM_WALL_TECH), t(FORTIFIED_WALL_TECH)],
+		[b(GRANARY), t(WATCH_TOWER_TECH)],
+		[t(WATCH_TOWER_TECH), t(SENTRY_TOWER_TECH)],
+		[t(SENTRY_TOWER_TECH), t(GUARD_TOWER_TECH)],
+		[t(GUARD_TOWER_TECH), t(BALLISTA_TOWER_TECH)],
+		[b(SMALL_WALL), b(MEDIUM_WALL)],
+		[b(MEDIUM_WALL), b(FORTIFIED_WALL)],
+		[b(SMALL_GATE), b(MEDIUM_GATE)],
+		[b(MEDIUM_GATE), b(FORTIFIED_GATE)],
+		[b(WATCH_TOWER), b(SENTRY_TOWER)],
+		[b(SENTRY_TOWER), b(GUARD_TOWER)],
+		[b(GUARD_TOWER), b(BALLISTA_TOWER)],
+		[b(MARKET), b(FARM)],
+		[b(MARKET), b(GOVERNMENT_CENTER)],
+		[b(MARKET), b(TEMPLE)],
+		[b(MARKET), t(WOODWORKING)],
+		[t(WOODWORKING), t(ARTISANSHIP)],
+		[t(ARTISANSHIP), t(CRAFTSMANSHIP)],
+		[b(MARKET), t(STONE_MINING)],
+		[t(STONE_MINING), t(SIEGECRAFT)],
+		[b(MARKET), t(GOLD_MINING)],
+		[t(GOLD_MINING), t(COINAGE)],
+		[b(MARKET), t(DOMESTICATION)],
+		[t(DOMESTICATION), t(PLOW)],
+		[t(PLOW), t(IRRIGATION)],
+		[b(MARKET), t(WHEEL)],
+		[t(WHEEL), u(TRADE_CART)],
+		[b(GOVERNMENT_CENTER), t(NOBILITY)],
+		[b(GOVERNMENT_CENTER), t(WRITING)],
+		[b(GOVERNMENT_CENTER), t(ARCHITECTURE)],
+		[b(GOVERNMENT_CENTER), t(LOGISTICS)],
+		[b(GOVERNMENT_CENTER), t(CITY_WATCH)],
+		[b(GOVERNMENT_CENTER), b(TOWN_CENTER_2)],
+		// [b(GOVERNMENT_CENTER), t(ARISTOCRACY)],
+		// [b(GOVERNMENT_CENTER), t(BALLISTICS)],
+		// [b(GOVERNMENT_CENTER), t(ALCHEMY)],
+		// [b(GOVERNMENT_CENTER), t(ENGINEERING)],
+		// [b(GOVERNMENT_CENTER), t(CONSCRIPTION)],
+		// [b(GOVERNMENT_CENTER), t(URBANIZATION)],
+		[b(TEMPLE), t(ASTROLOGY)],
+		[b(TEMPLE), t(MYSTICISM)],
+		[b(TEMPLE), t(POLYTHEISM)],
+		[b(TEMPLE), u(PRIEST)],
+		// [b(TEMPLE), t(AFTERLIFE)],
+		// [b(TEMPLE), t(MONOTHEISM)],
+		// [b(TEMPLE), t(FANATICISM)],
+		// [b(TEMPLE), t(ZEALOTRY)],
+		// [b(TEMPLE), t(MEDICINE)],
+		// [b(TEMPLE), t(THEOCRACY)],
+		[b(TOWN_CENTER), u(VILLAGER)],
+		[b(TOWN_CENTER), t(TOOL_AGE)],
+		[t(TOOL_AGE), t(BRONZE_AGE)],
+		[t(BRONZE_AGE), t(IRON_AGE)],
+		[b(DOCK), u(FISHING_BOAT)],
+		[u(FISHING_BOAT), u(FISHING_SHIP)],
+		[b(DOCK), u(TRADE_BOAT)],
+		[u(TRADE_BOAT), u(MERCHANT_SHIP)],
+		[b(DOCK), u(LIGHT_TRANSPORT)],
+		[u(LIGHT_TRANSPORT), u(HEAVY_TRANSPORT)],
+		[b(DOCK), u(SCOUT_SHIP)],
+		[u(SCOUT_SHIP), u(WAR_GALLEY)],
+		[u(WAR_GALLEY), u(TRIREME)],
+		// [b(DOCK), u(FIRE_GALLEY)],
+		// [b(DOCK), u(CATAPULT_TRIREME)],
+		[u(CATAPULT_TRIREME), u(JUGGERNAUT)],
     ];
 
     let connection_ids = [];
