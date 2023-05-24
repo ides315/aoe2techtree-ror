@@ -5,25 +5,6 @@
         "Stone Age": "4201",
         "Tool Age": "4202"
     },
-    "building_styles": {
-        "Assyrians": "3",
-        "Babylonians": "2",
-        "Carthaginians": "5",
-        "Choson": "1",
-        "Egyptians": "3",
-        "Greeks": "4",
-        "Hittites": "3",
-        "Lac Viet": "1",
-        "Macedonians": "5",
-        "Minoans": "4",
-        "Palmyrans": "5",
-        "Persians": "2",
-        "Phoenicians": "4",
-        "Romans": "5",
-        "Shang": "1",
-        "Sumerians": "2",
-        "Yamato": "1"
-    },
     "civ_helptexts": {
         "Assyrians": "120153",
         "Babylonians": "120152",
@@ -4214,6 +4195,7 @@
     },
     "techtrees": {
         "Assyrians": {
+            "buildingStyle": "3",
             "buildings": [
                 12,
                 45,
@@ -4330,6 +4312,7 @@
             ]
         },
         "Babylonians": {
+            "buildingStyle": "2",
             "buildings": [
                 12,
                 45,
@@ -4448,6 +4431,7 @@
             ]
         },
         "Carthaginians": {
+            "buildingStyle": "5",
             "buildings": [
                 12,
                 45,
@@ -4563,6 +4547,7 @@
             ]
         },
         "Choson": {
+            "buildingStyle": "1",
             "buildings": [
                 12,
                 45,
@@ -4673,6 +4658,7 @@
             ]
         },
         "Egyptians": {
+            "buildingStyle": "3",
             "buildings": [
                 12,
                 45,
@@ -4788,6 +4774,7 @@
             ]
         },
         "Greeks": {
+            "buildingStyle": "4",
             "buildings": [
                 12,
                 45,
@@ -4904,6 +4891,7 @@
             ]
         },
         "Hittites": {
+            "buildingStyle": "3",
             "buildings": [
                 12,
                 45,
@@ -5015,6 +5003,7 @@
             ]
         },
         "Lac Viet": {
+            "buildingStyle": "1",
             "buildings": [
                 12,
                 45,
@@ -5130,6 +5119,7 @@
             ]
         },
         "Macedonians": {
+            "buildingStyle": "5",
             "buildings": [
                 12,
                 45,
@@ -5237,6 +5227,7 @@
             ]
         },
         "Minoans": {
+            "buildingStyle": "4",
             "buildings": [
                 12,
                 45,
@@ -5347,6 +5338,7 @@
             ]
         },
         "Palmyrans": {
+            "buildingStyle": "5",
             "buildings": [
                 12,
                 45,
@@ -5463,6 +5455,7 @@
             ]
         },
         "Persians": {
+            "buildingStyle": "2",
             "buildings": [
                 12,
                 45,
@@ -5582,6 +5575,7 @@
             ]
         },
         "Phoenicians": {
+            "buildingStyle": "4",
             "buildings": [
                 12,
                 45,
@@ -5702,6 +5696,7 @@
             ]
         },
         "Romans": {
+            "buildingStyle": "5",
             "buildings": [
                 12,
                 45,
@@ -5818,6 +5813,7 @@
             ]
         },
         "Shang": {
+            "buildingStyle": "1",
             "buildings": [
                 12,
                 45,
@@ -5936,6 +5932,7 @@
             ]
         },
         "Sumerians": {
+            "buildingStyle": "2",
             "buildings": [
                 12,
                 45,
@@ -6051,6 +6048,7 @@
             ]
         },
         "Yamato": {
+            "buildingStyle": "1",
             "buildings": [
                 12,
                 45,
