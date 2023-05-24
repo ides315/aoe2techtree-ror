@@ -22,6 +22,7 @@ const MONK_PREFIX_MESO = 'meso_';
 const MONK_PREFIX_AFRICAN = 'african_';
 const MONK_PREFIX_ASIAN = 'asian_';
 const MONK_PREFIX_GENERIC = '';
+const BUILDING_STYLE_GENERIC = '';
 const BARRACKS = 12;
 const DOCK = 45;
 const SIEGE_WORKSHOP = 49;
@@ -367,21 +368,20 @@ function formatName(originalname) {
     return items.join('\n');
 }
 
-function unique(ids, monk_prefix) {
-    if (monk_prefix === undefined) {
-        monk_prefix = MONK_PREFIX_GENERIC;
-    }
-    SVG('#unit_' + formatId(UNIQUE_UNIT) + '_text').text(formatName(data.strings[data.data.units[ids[0]].LanguageNameId]));
-    SVG('#unit_' + formatId(UNIQUE_UNIT) + '_overlay').data({'name': data.strings[data.data.units[ids[0]].LanguageNameId], 'id':'unit_'+ids[0]});
-    SVG('#unit_' + formatId(ELITE_UNIQUE_UNIT) + '_text').text(formatName(data.strings[data.data.units[ids[1]].LanguageNameId]));
-    SVG('#unit_' + formatId(ELITE_UNIQUE_UNIT) + '_overlay').data({'name': data.strings[data.data.units[ids[1]].LanguageNameId], 'id':'unit_'+ids[1]});
-    SVG('#tech_' + formatId(UNIQUE_TECH_1) + '_text').text(formatName(data.strings[data.data.techs[ids[2]].LanguageNameId]));
-    SVG('#tech_' + formatId(UNIQUE_TECH_1) + '_overlay').data({'name': data.strings[data.data.techs[ids[2]].LanguageNameId], 'id':'tech_'+ids[2]});
-    SVG('#tech_' + formatId(UNIQUE_TECH_2) + '_text').text(formatName(data.strings[data.data.techs[ids[3]].LanguageNameId]));
-    SVG('#tech_' + formatId(UNIQUE_TECH_2) + '_overlay').data({'name': data.strings[data.data.techs[ids[3]].LanguageNameId], 'id':'tech_'+ids[3]});
-    SVG('#unit_' + formatId(UNIQUE_UNIT) + '_img').load('img/Units/' + formatId(ids[0]) + '.png');
-    SVG('#unit_' + formatId(ELITE_UNIQUE_UNIT) + '_img').load('img/Units/' + formatId(ids[1]) + '.png');
-    SVG('#unit_' + formatId(MONK) + '_img').load('img/Units/' + monk_prefix + '125.png');
+function unique(building_style) {
+	if (building_style === undefined) {
+		building_style = BUILDING_STYLE_GENERIC;
+	}
+	SVG('#building_' + formatId(BARRACKS) + '_img').load('img/Buildings/' + BARRACKS + '_' + building_style + '.png');
+	SVG('#building_' + formatId(ACADEMY) + '_img').load('img/Buildings/' + ACADEMY + '_' + building_style + '.png');
+	SVG('#building_' + formatId(TOWN_CENTER) + '_img').load('img/Buildings/' + TOWN_CENTER + '_' + building_style + '.png');
+	SVG('#building_' + formatId(TOWN_CENTER_2) + '_img').load('img/Buildings/' + TOWN_CENTER + '_' + building_style + '.png');
+	SVG('#building_' + formatId(MEDIUM_WALL) + '_img').load('img/Buildings/' + MEDIUM_WALL + '_' + building_style + '.png');
+	SVG('#building_' + formatId(FORTIFIED_WALL) + '_img').load('img/Buildings/' + FORTIFIED_WALL + '_' + building_style + '.png');
+	SVG('#building_' + formatId(GOVERNMENT_CENTER) + '_img').load('img/Buildings/' + GOVERNMENT_CENTER + '_' + building_style + '.png');
+	SVG('#building_' + formatId(GUARD_TOWER) + '_img').load('img/Buildings/' + GUARD_TOWER + '_' + building_style + '.png');
+	SVG('#building_' + formatId(BALLISTA_TOWER) + '_img').load('img/Buildings/' + GUARD_TOWER + '_' + building_style + '.png');
+	SVG('#building_' + formatId(WONDER) + '_img').load('img/Buildings/' + WONDER + '_' + building_style + '.png');
 }
 
 function getName(id, itemtype) {

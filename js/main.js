@@ -226,13 +226,12 @@ function displayData() {
         }
     }
 
-
+	create_building_index();
     let civWasLoaded = updateCivselectValue();
     if(!civWasLoaded){
         loadCiv();
     }
     create_colour_key();
-    create_building_index();
     window.onhashchange = function () {
         updateCivselectValue();
     };
@@ -746,6 +745,9 @@ function create_building_index() {
     let kc = document.getElementById('buildingindex__table');
     let tr = null;
     let count = 0;
+	let civ_name = document.getElementById('civselect').value;
+	let building_style = civs[civ_name].buildingStyle;
+	
     for (let index in buildingIndexShowIds) {
         let buildingId = buildingIndexShowIds[index];
         if ((count % buildingIndexRowLength) === 0) {
@@ -756,7 +758,8 @@ function create_building_index() {
         }
         ++count;
         let img = document.createElement('img');
-        img.src = 'img/Buildings/' + String(buildingId) + '.png';
+		img.id = 'building_index_' + String(buildingId) + '_img';
+		img.src = 'img/Buildings/' + String(buildingId) + '.png';
         img.style.height = '24px';
         img.style.width = '24px';
         let td = document.createElement('td');
@@ -860,6 +863,11 @@ function civ(name) {
     });
 
     enable(selectedCiv.buildings, selectedCiv.units, selectedCiv.techs);
+	unique(selectedCiv.buildingStyle);
+	
+	document.getElementById('building_index_12_img').src = `./img/Buildings/12_${selectedCiv.buildingStyle}.png`;
+	document.getElementById('building_index_103_img').src = `./img/Buildings/103_${selectedCiv.buildingStyle}.png`;
+	document.getElementById('building_index_209_img').src = `./img/Buildings/209_${selectedCiv.buildingStyle}.png`;
 }
 
 function SVGObjectIsOpaque(svgObj) {
