@@ -338,6 +338,8 @@ def gather_civs(techtrees):
             civname = 'Lac Viet'        # add space
         civs[civname] = current_civ
 
+        current_civ['buildingStyle'] = BUILDING_STYLES[civname]
+
     return civs, unit_upgrades
 
 
@@ -365,7 +367,6 @@ def write_datafile(data, techtrees, outputdir):
     datafile = outputdir / 'data.json'
     data = {
         "age_names": AGE_NAMES,
-        "building_styles": BUILDING_STYLES, 
         "civ_helptexts": CIV_HELPTEXTS,
         "civ_names": CIV_NAMES,
         "data": data,
