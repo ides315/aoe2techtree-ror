@@ -28,4 +28,4 @@ If you are running Windows, and have Python 3 installed, you can also double-cli
 
 [HSZemi](https://github.com/hszemi) - Original Author
 
-[ides315] (https://github.com/ides315) - Used HSZemi's amazing work to plug in the Return of Rome tech tree
+[ides315](https://github.com/ides315) - Used HSZemi's amazing work to plug in the Return of Rome tech tree
